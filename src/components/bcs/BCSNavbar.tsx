@@ -5,9 +5,10 @@ import bcsLogo from 'figma:asset/3b549fef51db7f331d7ed9cb4dff8ea3198a7458.png';
 interface BCSNavbarProps {
   cityName: string;
   citySlug: string;
+  onNavigate: (page: string) => void;
 }
 
-export function BCSNavbar({ cityName, citySlug }: BCSNavbarProps) {
+export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -112,21 +113,18 @@ export function BCSNavbar({ cityName, citySlug }: BCSNavbarProps) {
               {isServicesOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50">
                   {cities.map((city) => (
-                    <a
+                    <button
                       key={city.slug}
-                      href={`/bussiness-communication-solution/${city.slug}`}
-                      className={`block px-4 py-2 hover:bg-[#01BAEF]/10 transition-colors text-sm ${
+                      onClick={() => {
+                        setIsServicesOpen(false);
+                        onNavigate(`bussiness-communication-solution/${city.slug}`);
+                      }}
+                      className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 transition-colors text-sm ${
                         city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
                       }`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsServicesOpen(false);
-                        window.history.pushState(null, '', `/bussiness-communication-solution/${city.slug}`);
-                        window.location.reload();
-                      }}
                     >
                       {city.name}
-                    </a>
+                    </button>
                   ))}
                 </div>
               )}
@@ -200,21 +198,18 @@ export function BCSNavbar({ cityName, citySlug }: BCSNavbarProps) {
             <div className="pt-3 border-t border-gray-200">
               <p className="px-4 py-2 text-sm text-[#5A6C7D]">Service Areas</p>
               {cities.map((city) => (
-                <a
+                <button
                   key={city.slug}
-                  href={`/bussiness-communication-solution/${city.slug}`}
-                  className={`block px-4 py-2 hover:bg-[#01BAEF]/10 rounded-lg transition-colors ${
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    onNavigate(`bussiness-communication-solution/${city.slug}`);
+                  }}
+                  className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 rounded-lg transition-colors ${
                     city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsMobileMenuOpen(false);
-                    window.history.pushState(null, '', `/bussiness-communication-solution/${city.slug}`);
-                    window.location.reload();
-                  }}
                 >
                   {city.name}
-                </a>
+                </button>
               ))}
             </div>
 

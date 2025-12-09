@@ -14,9 +14,10 @@ import { BCSFooter } from './BCSFooter';
 
 interface BCSLandingPageProps {
   data: BCSCityData;
+  onNavigate: (page: string) => void;
 }
 
-export function BCSLandingPage({ data }: BCSLandingPageProps) {
+export function BCSLandingPage({ data, onNavigate }: BCSLandingPageProps) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [data.slug]);
@@ -40,7 +41,7 @@ export function BCSLandingPage({ data }: BCSLandingPageProps) {
       </Helmet>
       
       <div className="min-h-screen bg-white overflow-x-hidden w-full">
-        <BCSNavbar cityName={data.name} citySlug={data.slug} />
+        <BCSNavbar cityName={data.name} citySlug={data.slug} onNavigate={onNavigate} />
         
         <BCSHeroNew 
           headline={data.heroHeadline}

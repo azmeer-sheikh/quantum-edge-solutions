@@ -12,10 +12,12 @@ import { AdminSetup } from './components/AdminSetup';
 import { NotFoundPage } from './components/NotFoundPage';
 import { SEOHead } from './components/SEOHead';
 import { BCSLandingPage } from './components/bcs/BCSLandingPage';
+import { BCSLoader } from './components/bcs/BCSLoader';
 import { bcsData } from './data/bcsData';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Check URL for routes on mount
   useEffect(() => {
@@ -94,17 +96,21 @@ export default function App() {
   }, []);
 
   const handleNavigate = (page: string) => {
-    setCurrentPage(page);
-    
-    // Use clean URLs for BCS pages, hash for others
+    // Show loader for BCS page transitions
     if (page.startsWith('bussiness-communication-solution/')) {
-      const path = `/${page}`;
-      window.history.pushState(null, '', path);
+      setIsLoading(true);
+      setTimeout(() => {
+        setCurrentPage(page);
+        const path = `/${page}`;
+        window.history.pushState(null, '', path);
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        setIsLoading(false);
+      }, 300);
     } else {
+      setCurrentPage(page);
       window.location.hash = page;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const renderPage = () => {
@@ -123,7 +129,7 @@ export default function App() {
       
       const dataKey = cityMap[citySlug];
       if (dataKey && bcsData[dataKey]) {
-        return <BCSLandingPage data={bcsData[dataKey]} />;
+        return <BCSLandingPage data={bcsData[dataKey]} onNavigate={handleNavigate} />;
       }
       // Invalid BCS city - show 404
       return <NotFoundPage onNavigate={handleNavigate} />;
@@ -161,6 +167,7 @@ export default function App() {
   return (
     <>
       <SEOHead currentPage={currentPage} />
+      {isLoading && <BCSLoader />}
       <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
         {currentPage !== 'admin' && 
          currentPage !== 'admin-setup' && 
