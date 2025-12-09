@@ -1,0 +1,22 @@
+{
+  "routes": [
+    {
+      "src": "/bussiness-communication-solution/?$",
+      "dest": "/bussiness-communication-solution/austin"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/bussiness-communication-solution",
+      "destination": "/bussiness-communication-solution/austin"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

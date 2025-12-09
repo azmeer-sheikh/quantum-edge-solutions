@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/bussiness-communication-solution"
+  to = "/bussiness-communication-solution/austin"
+  status = 200
+
+[[redirects]]
+  from = "/bussiness-communication-solution/"
+  to = "/bussiness-communication-solution/austin"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
