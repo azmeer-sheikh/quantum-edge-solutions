@@ -16,7 +16,7 @@ export function BrandLogo({ className = "", variant = 'default' }: BrandLogoProp
     <div className={`${sizeClasses[variant]} ${className}`}>
       <img 
         src={logoImage} 
-        alt="Quantom Edge Solutions" 
+        alt="quantum Edge Solutions" 
         className="w-full h-auto"
       />
     </div>
@@ -29,7 +29,7 @@ export function BrandLogoHero({ className = "" }: { className?: string }) {
     <div className={`relative ${className}`}>
       <img 
         src={logoImage} 
-        alt="Quantom Edge Solutions" 
+        alt="quantum Edge Solutions" 
         className="w-full h-auto glow-cyan"
       />
     </div>

@@ -51,7 +51,7 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
     name: 'Quantum Edge Solutions',
     url: 'https://quantumedge.com',
     logo: 'https://quantumedge.com/logo.png',
-    email: 'contact@quantomedge.io',
+    email: 'contact@quantumedge.io',
     phone: '+1 (614) 405-5814',
     address: {
       streetAddress: '7838 Malton Ln',

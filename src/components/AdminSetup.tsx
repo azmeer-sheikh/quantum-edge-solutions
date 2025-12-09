@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { API_URL, getAuthHeaders } from "../utils/supabase/client";
-import { QuantomEdgeLogo } from "./QuantomEdgeLogo";
+import { quantumEdgeLogo } from "./quantumEdgeLogo";
 
 export function AdminSetup() {
   const [email, setEmail] = useState("");
@@ -56,7 +56,7 @@ export function AdminSetup() {
       <Card className="bg-[#1A1A24]/80 backdrop-blur-xl border border-[#00D0FF]/20 rounded-3xl shadow-2xl shadow-[#00D0FF]/10 w-full max-w-md">
         <CardHeader className="pb-8 border-b border-[#00D0FF]/10">
           <div className="flex flex-col items-center space-y-4">
-            <QuantomEdgeLogo size="lg" />
+            <quantumEdgeLogo size="lg" />
             <CardTitle className="text-white text-2xl text-center">
               Create Admin Account
             </CardTitle>
@@ -111,7 +111,7 @@ export function AdminSetup() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="admin@quantomedge.io"
+                  placeholder="admin@quantumedge.io"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="h-12 bg-[#0A0A0D]/50 border border-[#00D0FF]/30 text-white rounded-xl focus:border-[#00D0FF] focus:ring-[#00D0FF]/30"

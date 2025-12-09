@@ -266,7 +266,7 @@ User Input → useMemo Recalculate → Update Pagination → Re-render Table
 ### **1. Access Dashboard:**
 ```
 URL: https://your-website.com/#admin
-Credentials: admin@quantomedge.io / Testing@12345
+Credentials: admin@quantumedge.io / Testing@12345
 ```
 
 ### **2. First-Time Setup:**

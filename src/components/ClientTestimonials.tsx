@@ -11,7 +11,7 @@ export function ClientTestimonials() {
       industry: 'HVAC',
       icon: <Wrench className="w-5 h-5" />,
       location: 'Phoenix, AZ',
-      quote: 'Quantom Edge transformed our digital presence. We went from 3 leads per week to 45+ qualified leads monthly. Their local SEO strategy put us on the map - literally.',
+      quote: 'quantum Edge transformed our digital presence. We went from 3 leads per week to 45+ qualified leads monthly. Their local SEO strategy put us on the map - literally.',
       results: [
         { metric: '+287%', label: 'Lead Increase' },
         { metric: '#1', label: 'Google Ranking' },
@@ -256,7 +256,7 @@ export function ClientTestimonials() {
         >
           <div className="inline-block bg-[#1A1A22] border border-[#00D0FF]/20 rounded-lg px-6 py-4">
             <p className="text-[#C2C2CC] mb-2">
-              Join 500+ businesses growing with Quantom Edge
+              Join 500+ businesses growing with quantum Edge
             </p>
             <div className="flex items-center justify-center space-x-2 text-[#75FF00] text-sm font-mono">
               <TrendingUp className="w-4 h-4" />

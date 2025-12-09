@@ -1,0 +1,4 @@
+# Netlify redirects for SPA routing
+/bussiness-communication-solution /bussiness-communication-solution/austin 200
+/bussiness-communication-solution/ /bussiness-communication-solution/austin 200
+/* /index.html 200

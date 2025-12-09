@@ -55,7 +55,7 @@ The dashboard requires a valid access token. Make sure:
 
 1. **You're logged in:**
    - Go to `#admin`
-   - Enter credentials: `admin@quantomedge.io` / `Testing@12345`
+   - Enter credentials: `admin@quantumedge.io` / `Testing@12345`
    - Token is stored in session after login
 
 2. **Token is valid:**
@@ -87,7 +87,7 @@ fetch('https://{projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/s
 **Option B: Using Admin Setup Page**
 1. Go to `#admin-setup`
 2. Enter:
-   - Email: `admin@quantomedge.io`
+   - Email: `admin@quantumedge.io`
    - Password: `Testing@12345`
    - Name: `Admin User`
 3. Click "Create Admin Account"
@@ -98,7 +98,7 @@ fetch('https://{projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/s
   "success": true,
   "message": "Default admin credentials created successfully",
   "credentials": {
-    "email": "admin@quantomedge.io",
+    "email": "admin@quantumedge.io",
     "password": "Testing@12345"
   }
 }

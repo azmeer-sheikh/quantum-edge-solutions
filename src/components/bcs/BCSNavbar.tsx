@@ -114,13 +114,15 @@ export function BCSNavbar({ cityName, citySlug }: BCSNavbarProps) {
                   {cities.map((city) => (
                     <a
                       key={city.slug}
-                      href={`#bussiness-communication-solution/${city.slug}`}
+                      href={`/bussiness-communication-solution/${city.slug}`}
                       className={`block px-4 py-2 hover:bg-[#01BAEF]/10 transition-colors text-sm ${
                         city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
                       }`}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         setIsServicesOpen(false);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.history.pushState(null, '', `/bussiness-communication-solution/${city.slug}`);
+                        window.location.reload();
                       }}
                     >
                       {city.name}
@@ -200,11 +202,16 @@ export function BCSNavbar({ cityName, citySlug }: BCSNavbarProps) {
               {cities.map((city) => (
                 <a
                   key={city.slug}
-                  href={`#bussiness-communication-solution/${city.slug}`}
+                  href={`/bussiness-communication-solution/${city.slug}`}
                   className={`block px-4 py-2 hover:bg-[#01BAEF]/10 rounded-lg transition-colors ${
                     city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    window.history.pushState(null, '', `/bussiness-communication-solution/${city.slug}`);
+                    window.location.reload();
+                  }}
                 >
                   {city.name}
                 </a>

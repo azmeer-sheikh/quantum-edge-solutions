@@ -67,7 +67,7 @@ app.get("/make-server-398bae6f/health", (c) => {
 // Seed default admin credentials (can be called once to initialize)
 app.post("/make-server-398bae6f/admin/seed", async (c) => {
   try {
-    const email = "admin@quantomedge.io";
+    const email = "admin@quantumedge.io";
     const password = "Testing@12345";
     const name = "Admin User";
 

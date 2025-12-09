@@ -1,5 +1,5 @@
 /**
- * HERO ANIMATION SHOWCASE - Quantom Edge Solutions
+ * HERO ANIMATION SHOWCASE - quantum Edge Solutions
  * 
  * This file documents all the new animations added to the hero section:
  * 

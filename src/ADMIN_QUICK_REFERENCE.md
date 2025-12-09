@@ -3,7 +3,7 @@
 ## 📍 Access
 
 **Login:** `https://your-site.com/#admin`
-**Credentials:** admin@quantomedge.io / Testing@12345
+**Credentials:** admin@quantumedge.io / Testing@12345
 
 ---
 

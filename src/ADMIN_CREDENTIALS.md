@@ -6,7 +6,7 @@
 - All credentials stored securely in KV database
 - Passwords hashed with SHA-256
 - Custom token-based sessions (24-hour validity)
-- QuantomEdge logo displayed throughout admin panel
+- quantumEdge logo displayed throughout admin panel
 
 See **ADMIN_SETUP_GUIDE.md** for complete technical details.
 
@@ -53,7 +53,7 @@ This creates the default admin account instantly!
 2. **Enter Default Credentials:**
    ```
    Name:     Admin User
-   Email:    admin@quantomedge.io
+   Email:    admin@quantumedge.io
    Password: Testing@12345
    ```
 
@@ -70,14 +70,14 @@ This creates the default admin account instantly!
 
 ### Primary Admin
 ```
-Email:    admin@quantomedge.io
+Email:    admin@quantumedge.io
 Password: Testing@12345
 Name:     Admin User
 ```
 
 ### Team Member (Optional - Create Manually)
 ```
-Email:    team@quantomedge.io
+Email:    team@quantumedge.io
 Password: Testing@12345
 Name:     Team Member
 ```
@@ -90,7 +90,7 @@ Name:     Team Member
 
 1. **Go to:** `#admin`
 2. **Enter credentials:**
-   - Email: `admin@quantomedge.io`
+   - Email: `admin@quantumedge.io`
    - Password: `[your password]`
 3. **Click "Sign In"**
 4. **You're in!** Dashboard loads automatically
@@ -225,7 +225,7 @@ window.location.hash = 'contact'
 
 ## 🎨 Admin Panel Design
 
-Your admin panel matches the Quantom Edge brand:
+Your admin panel matches the quantum Edge brand:
 - 🎨 Dark background (#14141A)
 - 💠 Electric cyan accents (#00D0FF)
 - ⚡ Digital lime CTAs (#75FF00)

@@ -94,7 +94,7 @@ export function BCSFooter() {
             <ul className="space-y-2 text-sm">
               {cities.map(city => (
                 <li key={city.slug}>
-                  <a href={`#bussiness-communication-solution/${city.slug}`} className="text-white/70 hover:text-white transition-colors">
+                  <a href={`/bussiness-communication-solution/${city.slug}`} className="text-white/70 hover:text-white transition-colors">
                     {city.name}, TX
                   </a>
                 </li>

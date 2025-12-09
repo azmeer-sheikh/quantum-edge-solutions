@@ -13,7 +13,7 @@ async function hashPassword(password: string): Promise<string> {
 }
 
 async function seedDefaultAdmin() {
-  const email = "admin@quantomedge.io";
+  const email = "admin@quantumedge.io";
   const password = "Testing@12345";
   const name = "Admin User";
 

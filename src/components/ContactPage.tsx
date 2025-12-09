@@ -104,7 +104,7 @@ export function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["contact@quantomedge.io", "enterprise@quantomedge.io"],
+      details: ["contact@quantumedge.io", "enterprise@quantumedge.io"],
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -521,7 +521,7 @@ export function ContactPage() {
               <MapPin className="w-16 h-16 text-[#00D0FF] mx-auto relative drop-shadow-[0_0_20px_rgba(0,208,255,0.6)]" />
             </div>
             <p className="text-[#C2C2CC] font-mono tracking-wider text-lg mb-2">
-              QUANTOM EDGE HEADQUARTERS
+              quantum EDGE HEADQUARTERS
             </p>
             <p className="text-[#C2C2CC]/80">
               7838 Malton Ln, Worthington, OH 43085, USA

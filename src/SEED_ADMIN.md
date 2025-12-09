@@ -38,7 +38,7 @@ fetch('https://{projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/s
 5. **You should see:**
    ```
    ✅ Admin created successfully!
-   Email: admin@quantomedge.io
+   Email: admin@quantumedge.io
    Password: Testing@12345
    ```
 
@@ -49,7 +49,7 @@ fetch('https://{projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/s
 1. **Go to:** `#admin-setup`
 2. **Fill in:**
    - **Name:** Admin User
-   - **Email:** admin@quantomedge.io
+   - **Email:** admin@quantumedge.io
    - **Password:** Testing@12345
 3. **Click "Create Admin Account"**
 4. **Done!**
@@ -72,7 +72,7 @@ curl -X POST \
 ### Login:
 1. Go to `#admin`
 2. Enter:
-   - **Email:** admin@quantomedge.io
+   - **Email:** admin@quantumedge.io
    - **Password:** Testing@12345
 3. Click "Sign In"
 4. You're in! 🎉

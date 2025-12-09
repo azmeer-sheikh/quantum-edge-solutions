@@ -94,7 +94,7 @@ export function AboutPage() {
               </div>
               <h2 className="text-white mb-6 text-4xl">Algorithmic Growth at Scale</h2>
               <p className="text-[#C2C2CC] mb-4 text-lg">
-                Founded in 2018, Quantom Edge Solutions emerged from a simple observation: enterprise marketing and operations were drowning in manual processes and fragmented data.
+                Founded in 2018, quantum Edge Solutions emerged from a simple observation: enterprise marketing and operations were drowning in manual processes and fragmented data.
               </p>
               <p className="text-[#C2C2CC] mb-4 text-lg">
                 We built a solution combining advanced AI, full-stack development expertise, and deep marketing intelligence to automate and optimize every aspect of digital growth.

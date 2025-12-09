@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { API_URL, getAuthHeaders } from "../utils/supabase/client";
-import { QuantomEdgeLogo } from "./QuantomEdgeLogo";
+import { quantumEdgeLogo } from "./quantumEdgeLogo";
 
 interface AdminLoginProps {
   onLoginSuccess: (accessToken: string) => void;
@@ -70,7 +70,7 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
           {/* Header with logo */}
           <div className="bg-gradient-to-br from-[#00D0FF]/10 via-[#75FF00]/5 to-transparent p-8 border-b border-[#00D0FF]/20">
             <div className="flex flex-col items-center space-y-4">
-              <QuantomEdgeLogo size="lg" />
+              <quantumEdgeLogo size="lg" />
               <div className="text-center">
                 <h1 className="text-white text-2xl mb-1">Admin Portal</h1>
                 <p className="text-[#C2C2CC] text-sm">Quantum Edge Solutions</p>
@@ -99,7 +99,7 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="admin@quantomedge.io"
+                    placeholder="admin@quantumedge.io"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-11 h-12 bg-[#0A0A0D]/50 border border-[#00D0FF]/30 text-white rounded-xl focus:border-[#00D0FF] focus:ring-[#00D0FF]/30 transition-all"

@@ -172,7 +172,7 @@ Cmd + Shift + R (Mac)
 ### **Step 2: Re-login**
 ```
 Go to: #admin
-Email: admin@quantomedge.io
+Email: admin@quantumedge.io
 Password: Testing@12345
 ```
 
@@ -416,4 +416,4 @@ We chose custom auth for simplicity:
 
 **Access now:** `https://your-website.com/#admin`
 
-**Credentials:** `admin@quantomedge.io / Testing@12345`
+**Credentials:** `admin@quantumedge.io / Testing@12345`

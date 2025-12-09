@@ -26,7 +26,7 @@ Or:
 1. **Go to:** `https://your-website.com/#admin`
 
 2. **Enter credentials:**
-   - Email: `admin@quantomedge.io`
+   - Email: `admin@quantumedge.io`
    - Password: `Testing@12345`
 
 3. **Click:** "Login to Dashboard"
@@ -372,4 +372,4 @@ headers: {
 
 **Access it now:** `https://your-website.com/#admin`
 
-**Login:** `admin@quantomedge.io / Testing@12345`
+**Login:** `admin@quantumedge.io / Testing@12345`

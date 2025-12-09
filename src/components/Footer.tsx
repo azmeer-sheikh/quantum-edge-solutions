@@ -8,16 +8,16 @@ export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-[#14141A] text-[#C2C2CC] border-t border-[#00D0FF]/20 relative overflow-hidden w-full">
       <div className="container mx-auto px-4 py-12 relative z-10 max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-[#00D0FF] to-[#75FF00] rounded-lg flex items-center justify-center">
                 <span className="text-[#14141A] font-bold text-xl">QE</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-bold leading-tight">
-                  QUANTOM
+                  QUANTUM
                 </span>
                 <span className="text-[#75FF00] font-bold leading-tight">
                   EDGE
@@ -107,8 +107,17 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>Marketing Automation</li>
               <li>SaaS Development</li>
               <li>Data Analytics</li>
+              <li>
+                <a
+                  href="/bussiness-communication-solution/austin"
+                  className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
+                >
+                  Bussiness Communication Solutions
+                </a>
+              </li>
             </ul>
           </div>
+
 
           {/* Contact Info */}
           <div>
@@ -137,10 +146,10 @@ export function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="flex-shrink-0 text-[#00D0FF]" />
                 <a
-                  href="mailto:contact@quantomedge.io"
+                  href="mailto:contact@quantumedge.io"
                   className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
                 >
-                  contact@quantomedge.io
+                  contact@quantumedge.io
                 </a>
               </li>
             </ul>
@@ -150,7 +159,7 @@ export function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar */}
         <div className="border-t border-[#00D0FF]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-[#C2C2CC]/60 mb-4 md:mb-0">
-            &copy; 2025 Quantom Edge Solutions. All rights reserved.
+            &copy; 2025 quantum Edge Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 text-[#C2C2CC]/60">
             <button className="hover:text-[#00D0FF] transition-colors">

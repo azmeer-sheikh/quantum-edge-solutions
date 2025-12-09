@@ -1,11 +1,11 @@
 import logo from "figma:asset/f8d2259844c66230ae506df87cb3509ebf5d13b9.png";
 
-interface QuantomEdgeLogoProps {
+interface quantumEdgeLogoProps {
   className?: string;
   size?: "sm" | "md" | "lg";
 }
 
-export function QuantomEdgeLogo({ className = "", size = "md" }: QuantomEdgeLogoProps) {
+export function quantumEdgeLogo({ className = "", size = "md" }: quantumEdgeLogoProps) {
   const sizeClasses = {
     sm: "w-10 h-10",
     md: "w-16 h-16",

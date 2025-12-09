@@ -2,7 +2,7 @@
 
 ## ✅ What's Been Built
 
-Your Contact Page is now a **premium, enterprise-grade** component with a futuristic cyber-tech aesthetic matching your Quantom Edge Solutions brand.
+Your Contact Page is now a **premium, enterprise-grade** component with a futuristic cyber-tech aesthetic matching your quantum Edge Solutions brand.
 
 ---
 
@@ -83,7 +83,7 @@ Your Contact Page is now a **premium, enterprise-grade** component with a futuri
 ### 4. **Contact Info Sidebar**
 
 **4 Info Cards:**
-1. **Email** - contact@quantomedge.io, enterprise@quantomedge.io
+1. **Email** - contact@quantumedge.io, enterprise@quantumedge.io
 2. **Phone** - +1 (614) 405-5814, 24/7 support
 3. **Office** - 7838 Malton Ln, Worthington, OH 43085
 4. **Hours** - Mon-Fri 9am-6pm EST, 24/7 enterprise support
@@ -283,7 +283,7 @@ POST https://{projectId}.supabase.co/functions/v1/make-server-398bae6f/contact
 1. Navigate to `#admin`
 2. Login with credentials:
    ```
-   Email: admin@quantomedge.io
+   Email: admin@quantumedge.io
    Password: Testing@12345
    ```
 3. View all submitted contact forms

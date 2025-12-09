@@ -10,7 +10,7 @@ export function Logo({ className = "w-10 h-10", variant = 'icon' }: LogoProps) {
     return (
       <div className="flex flex-col items-start">
         <span className="text-white font-bold text-lg leading-tight tracking-tight">
-          QUANTOM
+          quantum
         </span>
         <span className="text-[#75FF00] font-bold text-lg leading-tight tracking-tight">
           EDGE
@@ -25,7 +25,7 @@ export function Logo({ className = "w-10 h-10", variant = 'icon' }: LogoProps) {
         <LogoIcon className={className} />
         <div className="flex flex-col items-start">
           <span className="text-white font-bold text-lg leading-tight tracking-tight">
-            QUANTOM
+            quantum
           </span>
           <span className="text-[#75FF00] font-bold text-lg leading-tight tracking-tight">
             EDGE

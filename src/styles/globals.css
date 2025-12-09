@@ -39,7 +39,7 @@
 }
 
 .dark {
-  /* Dark Mode Color System (Quantom Edge) */
+  /* Dark Mode Color System (quantum Edge) */
   --background: #14141A;
   --foreground: #C2C2CC;
   --card: #14141A;
@@ -62,7 +62,7 @@
   --switch-background: #2A2A35;
   --ring: #00D0FF;
   
-  /* Custom Quantom Colors */
+  /* Custom quantum Colors */
   --cyber-cyan: #00D0FF;
   --digital-lime: #75FF00;
   --dark-bg: #14141A;

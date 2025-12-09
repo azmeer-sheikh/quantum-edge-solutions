@@ -99,7 +99,7 @@ allowHeaders: ["Content-Type", "Authorization", "X-Access-Token"],
 ### **Step 2: Login Again**
 ```
 1. Go to #admin
-2. Login with: admin@quantomedge.io / Testing@12345
+2. Login with: admin@quantumedge.io / Testing@12345
 3. Check console for success message
 ```
 
@@ -352,6 +352,6 @@ The JWT error has been **completely fixed** by:
 
 **Access it at:** `https://your-site.com/#admin`
 
-**Login with:** `admin@quantomedge.io / Testing@12345`
+**Login with:** `admin@quantumedge.io / Testing@12345`
 
 **Enjoy your premium admin dashboard with zero JWT errors!** 🚀

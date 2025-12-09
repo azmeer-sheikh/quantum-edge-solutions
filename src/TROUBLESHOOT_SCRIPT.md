@@ -278,7 +278,7 @@ fetch(`https://${projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/
 
 ### **If Token Missing:**
 1. Go to `#admin`
-2. Login with: `admin@quantomedge.io / Testing@12345`
+2. Login with: `admin@quantumedge.io / Testing@12345`
 3. Run script again
 
 ### **If Token Expired:**
@@ -313,7 +313,7 @@ fetch(`https://${projectId}.supabase.co/functions/v1/make-server-398bae6f/admin/
 
 🔑 Access Token Check:
 ✅ Access token found: eyJlbWFpbCI6ImFkbWl...
-📝 Token contents: {email: "admin@quantomedge.io", timestamp: 1234567890, random: "..."}
+📝 Token contents: {email: "admin@quantumedge.io", timestamp: 1234567890, random: "..."}
 ⏰ Token age: 2.34 hours
 ✅ Token valid for 21.66 more hours
 

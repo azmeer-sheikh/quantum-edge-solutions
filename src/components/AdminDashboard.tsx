@@ -54,7 +54,7 @@ import {
   DialogTitle,
 } from "./ui/dialog";
 import { API_URL, getAuthHeaders } from "../utils/supabase/client";
-import { QuantomEdgeLogo } from "./QuantomEdgeLogo";
+import { quantumEdgeLogo } from "./quantumEdgeLogo";
 import { ThemeProvider, useTheme } from "./ThemeProvider";
 
 interface Submission {
@@ -390,7 +390,7 @@ function AdminDashboardContent({ accessToken, onLogout }: AdminDashboardProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-xl bg-gradient-to-br from-[#00D0FF]/10 to-[#75FF00]/10 dark:from-[#00D0FF]/20 dark:to-[#75FF00]/20 shadow-lg dark:shadow-[0_0_20px_rgba(0,208,255,0.2)]">
-                <QuantomEdgeLogo size="sm" />
+                <quantumEdgeLogo size="sm" />
               </div>
               <div>
                 <h1 className="text-gray-900 dark:text-white text-2xl font-semibold tracking-tight">Admin Dashboard</h1>
