@@ -23,9 +23,24 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
       description: 'Comprehensive digital marketing services including technical SEO, local search optimization, social media campaigns, content marketing, web/app development, and custom SaaS platforms.',
       keywords: 'SEO services, local SEO optimization, Google My Business, social media marketing, content strategy, website development, mobile app development, SaaS platforms, marketing automation',
     },
+    'seo-services': {
+      title: 'SEO Services | Search Engine Optimization Agency',
+      description: 'Expert SEO services including technical SEO, local SEO, content optimization, and link building. Drive organic traffic and dominate search rankings.',
+      keywords: 'SEO services, search engine optimization, local SEO, technical SEO, link building, keyword research, Google rankings, organic traffic',
+    },
+    'web-design': {
+      title: 'Web Design & Development | Custom Website Solutions',
+      description: 'Professional web design and development services. Custom websites built for speed, conversion, and stunning user experience. Mobile-first responsive design.',
+      keywords: 'web design, website development, custom websites, responsive design, mobile-first, web development agency, WordPress, React',
+    },
+    'marketing-services': {
+      title: 'Digital Marketing Services | PPC, Social Media & Email Marketing',
+      description: 'Full-service digital marketing including PPC advertising, social media marketing, email campaigns, and marketing automation. Data-driven strategies for maximum ROI.',
+      keywords: 'digital marketing, PPC advertising, social media marketing, email marketing, marketing automation, Google Ads, Facebook Ads, content marketing',
+    },
     about: {
       title: 'About Quantum Edge | Data-Driven Digital Marketing Experts',
-      description: 'Enterprise-grade digital marketing and automation agency with 500+ clients, 98% retention, and $50M+ revenue generated. AI-powered optimization for measurable results.',
+      description: 'Professional digital marketing and automation agency delivering AI-powered optimization for measurable results. Hybrid SaaS platform and agency services.',
       keywords: 'digital marketing agency, marketing automation, AI marketing, enterprise solutions, B2B agency, marketing ROI, data-driven marketing',
     },
     portfolio: {
@@ -48,16 +63,16 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
   const meta = pageMeta[currentPage] || pageMeta.home;
   
   const businessInfo = {
-    name: 'Quantum Edge Solutions',
-    url: 'https://quantumedge.com',
-    logo: 'https://quantumedge.com/logo.png',
-    email: 'contact@quantumedge.io',
+    name: 'Quantum Edge Solution LLC',
+    url: 'https://quantumedgesolution.org',
+    logo: 'https://quantumedgesolution.org/logo.png',
+    email: 'contact@quantumedgesolution.org',
     phone: '+1 (614) 405-5814',
     address: {
-      streetAddress: '7838 Malton Ln',
-      addressLocality: 'Worthington',
-      addressRegion: 'OH',
-      postalCode: '43085',
+      streetAddress: 'Fort Worth',
+      addressLocality: 'Fort Worth',
+      addressRegion: 'TX',
+      postalCode: '76102',
       addressCountry: 'US',
     },
   };
@@ -103,8 +118,8 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
+      ratingValue: '4.8',
+      reviewCount: '50',
     },
   };
 

@@ -5,36 +5,6 @@ import { Card, CardContent } from './ui/card';
 export function ClientTestimonials() {
   const testimonials = [
     {
-      name: 'Michael Chen',
-      role: 'Owner',
-      company: 'Elite HVAC Solutions',
-      industry: 'HVAC',
-      icon: <Wrench className="w-5 h-5" />,
-      location: 'Phoenix, AZ',
-      quote: 'quantum Edge transformed our digital presence. We went from 3 leads per week to 45+ qualified leads monthly. Their local SEO strategy put us on the map - literally.',
-      results: [
-        { metric: '+287%', label: 'Lead Increase' },
-        { metric: '#1', label: 'Google Ranking' },
-      ],
-      rating: 5,
-      color: '#00D0FF',
-    },
-    {
-      name: 'Sarah Rodriguez',
-      role: 'Marketing Director',
-      company: 'SunPower Innovations',
-      industry: 'Solar Energy',
-      icon: <Sun className="w-5 h-5" />,
-      location: 'Austin, TX',
-      quote: 'The custom web app they built handles our entire sales funnel. Installation bookings increased 340% and our customer management became seamless. Best ROI we\'ve ever seen.',
-      results: [
-        { metric: '+340%', label: 'Bookings' },
-        { metric: '12x', label: 'ROI' },
-      ],
-      rating: 5,
-      color: '#75FF00',
-    },
-    {
       name: 'James Patterson',
       role: 'CEO',
       company: 'SecureGuard Systems',
@@ -142,10 +112,10 @@ export function ClientTestimonials() {
           viewport={{ once: true }}
         >
           {[
-            { value: '500+', label: 'Happy Clients' },
-            { value: '98%', label: 'Retention Rate' },
-            { value: '4.9★', label: 'Avg. Rating' },
-            { value: '+287%', label: 'Avg. Growth' },
+            { value: '50+', label: 'Happy Clients' },
+            { value: '95%', label: 'Retention Rate' },
+            { value: '4.8★', label: 'Avg. Rating' },
+            { value: '+150%', label: 'Avg. Growth' },
           ].map((stat, index) => (
             <motion.div
               key={index}
@@ -256,11 +226,11 @@ export function ClientTestimonials() {
         >
           <div className="inline-block bg-[#1A1A22] border border-[#00D0FF]/20 rounded-lg px-6 py-4">
             <p className="text-[#C2C2CC] mb-2">
-              Join 500+ businesses growing with quantum Edge
+              Join businesses growing with Quantum Edge
             </p>
             <div className="flex items-center justify-center space-x-2 text-[#75FF00] text-sm font-mono">
               <TrendingUp className="w-4 h-4" />
-              <span>Average 287% growth in first 6 months</span>
+              <span>Proven results for our clients</span>
             </div>
           </div>
         </motion.div>

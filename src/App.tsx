@@ -3,6 +3,12 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './components/HomePage';
 import { ServicesPage } from './components/ServicesPage';
+import { SEOServicesPage } from './components/SEOServicesPage';
+import { WebDesignPage } from './components/WebDesignPage';
+import { MarketingServicesPage } from './components/MarketingServicesPage';
+import { PrivacyPolicyPage } from './components/PrivacyPolicyPage';
+import { TermsOfServicePage } from './components/TermsOfServicePage';
+import { RefundPolicyPage } from './components/RefundPolicyPage';
 import { AboutPage } from './components/AboutPage';
 import { PortfolioPage } from './components/PortfolioPage';
 import { BlogPage } from './components/BlogPage';
@@ -13,6 +19,7 @@ import { NotFoundPage } from './components/NotFoundPage';
 import { SEOHead } from './components/SEOHead';
 import { BCSLandingPage } from './components/bcs/BCSLandingPage';
 import { BCSLoader } from './components/bcs/BCSLoader';
+import { CookieConsent } from './components/CookieConsent';
 import { bcsData } from './data/bcsData';
 
 export default function App() {
@@ -140,6 +147,12 @@ export default function App() {
         return <HomePage onNavigate={handleNavigate} />;
       case 'services':
         return <ServicesPage onNavigate={handleNavigate} />;
+      case 'seo-services':
+        return <SEOServicesPage onNavigate={handleNavigate} />;
+      case 'web-design':
+        return <WebDesignPage onNavigate={handleNavigate} />;
+      case 'marketing-services':
+        return <MarketingServicesPage onNavigate={handleNavigate} />;
       case 'about':
         return <AboutPage />;
       case 'portfolio':
@@ -152,17 +165,25 @@ export default function App() {
         return <AdminPage />;
       case 'admin-setup':
         return <AdminSetup />;
+      case 'privacy-policy':
+        return <PrivacyPolicyPage onNavigate={handleNavigate} />;
+      case 'terms-of-service':
+        return <TermsOfServicePage onNavigate={handleNavigate} />;
+      case 'refund-policy':
+        return <RefundPolicyPage onNavigate={handleNavigate} />;
       case '404':
         return <NotFoundPage onNavigate={handleNavigate} />;
       default:
         // Check if it's an unknown route
-        const validPages = ['home', 'services', 'about', 'portfolio', 'blog', 'contact', 'admin', 'admin-setup'];
+        const validPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'about', 'portfolio', 'blog', 'contact', 'admin', 'admin-setup', 'privacy-policy', 'terms-of-service', 'refund-policy'];
         if (currentPage && !validPages.includes(currentPage)) {
           return <NotFoundPage onNavigate={handleNavigate} />;
         }
         return <HomePage onNavigate={handleNavigate} />;
     }
   };
+
+  const validMainPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'about', 'portfolio', 'blog', 'contact', 'privacy-policy', 'terms-of-service', 'refund-policy'];
 
   return (
     <>
@@ -172,7 +193,7 @@ export default function App() {
         {currentPage !== 'admin' && 
          currentPage !== 'admin-setup' && 
          currentPage !== '404' &&
-         !currentPage.startsWith('bussiness-communication-solution/') && (currentPage === 'home' || currentPage === 'services' || currentPage === 'about' || currentPage === 'portfolio' || currentPage === 'blog' || currentPage === 'contact') && (
+         !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
           <Header currentPage={currentPage} onNavigate={handleNavigate} />
         )}
         <main className="flex-grow overflow-x-hidden w-full">
@@ -181,10 +202,11 @@ export default function App() {
         {currentPage !== 'admin' && 
          currentPage !== 'admin-setup' && 
          currentPage !== '404' &&
-         !currentPage.startsWith('bussiness-communication-solution/') && (currentPage === 'home' || currentPage === 'services' || currentPage === 'about' || currentPage === 'portfolio' || currentPage === 'blog' || currentPage === 'contact') && (
+         !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
           <Footer onNavigate={handleNavigate} />
         )}
       </div>
+      <CookieConsent />
     </>
   );
 }

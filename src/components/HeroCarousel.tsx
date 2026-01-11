@@ -462,7 +462,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
       </AnimatePresence>
 
       {/* Navigation Arrows */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none z-20">
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none" style={{ zIndex: 2 }}>
         <button
           onClick={prevSlide}
           className="pointer-events-auto ml-2 lg:-ml-12 w-10 h-10 md:w-12 md:h-12 bg-[#1A1A22]/80 border border-[#00D0FF]/30 rounded-full flex items-center justify-center hover:bg-[#00D0FF]/10 hover:border-[#00D0FF] transition-all backdrop-blur-sm"

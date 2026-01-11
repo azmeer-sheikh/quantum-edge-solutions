@@ -84,9 +84,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
   ];
 
   const metrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: <Database className="w-6 h-6" /> },
-    { value: '98%', label: 'Client Retention', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '$50M+', label: 'Revenue Generated', icon: <BarChart className="w-6 h-6" /> },
+    { value: '50+', label: 'Clients Served', icon: <Database className="w-6 h-6" /> },
+    { value: '95%', label: 'Client Retention', icon: <TrendingUp className="w-6 h-6" /> },
+    { value: '$2M+', label: 'Revenue Generated', icon: <BarChart className="w-6 h-6" /> },
     { value: '24/7', label: 'System Uptime', icon: <Cpu className="w-6 h-6" /> },
   ];
 
@@ -103,7 +103,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </MobileOptimizedWrapper>
       
       {/* HERO SECTION - Clean, Smooth & Stunning */}
-      <section className="relative py-16 md:py-32 overflow-hidden w-full">
+      <section className="relative py-16 md:py-32 overflow-hidden w-full" style={{ zIndex: 1 }}>
         {/* Clean Background Stack */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#14141A] via-[#1A1A22] to-[#14141A] opacity-90" />
         
@@ -130,7 +130,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         {/* Smooth Gradient Overlay for Depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#14141A]/80 via-transparent to-[#14141A]/40 pointer-events-none" />
 
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 max-w-7xl w-full">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-[1] max-w-7xl w-full">
           {/* Hero Carousel */}
           <div className="max-w-5xl mx-auto w-full">
             <HeroCarousel onNavigate={onNavigate} />
@@ -162,11 +162,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Metrics Section */}
-      <section className="py-8 md:py-10 lg:py-12 bg-[#1A1A22] border-y border-[#00D0FF]/20 relative overflow-hidden">
+      <section className="py-8 md:py-10 lg:py-12 bg-[#1A1A22] border-y border-[#00D0FF]/20 relative overflow-hidden" style={{ zIndex: 1 }}>
         <MobileOptimizedWrapper>
           <div className="absolute inset-0 bg-gradient-to-br from-[#00D0FF]/5 to-[#75FF00]/5" />
         </MobileOptimizedWrapper>
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative" style={{ zIndex: 1 }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {metrics.map((metric, index) => (
               <MobileOptimizedWrapper

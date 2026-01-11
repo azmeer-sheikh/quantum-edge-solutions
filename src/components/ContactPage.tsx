@@ -104,7 +104,7 @@ export function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["contact@quantumedge.io", "enterprise@quantumedge.io"],
+      details: ["contact@quantumedgesolution.org", "enterprise@quantumedgesolution.org"],
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -114,7 +114,7 @@ export function ContactPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Office",
-      details: ["7838 Malton Ln", "Worthington, OH 43085, USA"],
+      details: ["Fort Worth, TX", "United States"],
     },
     {
       icon: <Clock className="w-6 h-6" />,

@@ -23,7 +23,7 @@ export function CursorTrail() {
   }, []);
   
   return (
-    <div className="fixed inset-0 pointer-events-none z-50">
+    <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 5 }}>
       {trail.map((point, index) => {
         const size = 40 - (trail.length - index) * 1.5;
         const opacity = (index / trail.length) * 0.3;

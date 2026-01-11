@@ -1,4 +1,5 @@
-import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Cookie } from "lucide-react";
+import { CookieSettingsButton } from './CookieConsent';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -64,18 +65,18 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("services")}
+                  onClick={() => onNavigate("about")}
                   className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
                 >
-                  Services
+                  Platform
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("about")}
+                  onClick={() => onNavigate("services")}
                   className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
                 >
-                  Solutions
+                  Services
                 </button>
               </li>
               <li>
@@ -100,19 +101,53 @@ export function Footer({ onNavigate }: FooterProps) {
           {/* Services */}
           <div>
             <h4 className="text-white mb-4 font-semibold">Services</h4>
-            <ul className="space-y-2 text-sm text-[#C2C2CC]/80">
-              <li>SEO & Local SEO</li>
-              <li>Google My Business</li>
-              <li>Digital Marketing Strategy</li>
-              <li>Marketing Automation</li>
-              <li>SaaS Development</li>
-              <li>Data Analytics</li>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <button
+                  onClick={() => onNavigate("seo-services")}
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  SEO Services
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("web-design")}
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  Web Design
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("marketing-services")}
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  Digital Marketing
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("services")}
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  Marketing Automation
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("about")}
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  SaaS Platform
+                </button>
+              </li>
               <li>
                 <a
                   href="/bussiness-communication-solution/austin"
-                  className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
                 >
-                  Bussiness Communication Solutions
+                  Business Communication Solutions
                 </a>
               </li>
             </ul>
@@ -129,9 +164,9 @@ export function Footer({ onNavigate }: FooterProps) {
                   className="flex-shrink-0 mt-1 text-[#00D0FF]"
                 />
                 <span className="text-[#C2C2CC]/80">
-                  7838 Malton Ln
+                  Fort Worth, TX
                   <br />
-                  Worthington, OH 43085, USA
+                  United States
                 </span>
               </li>
               <li className="flex items-center space-x-2">
@@ -146,10 +181,10 @@ export function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="flex-shrink-0 text-[#00D0FF]" />
                 <a
-                  href="mailto:contact@quantumedge.io"
+                  href="mailto:contact@quantumedgesolution.org"
                   className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
                 >
-                  contact@quantumedge.io
+                  contact@quantumedgesolution.org
                 </a>
               </li>
             </ul>
@@ -159,15 +194,28 @@ export function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar */}
         <div className="border-t border-[#00D0FF]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-[#C2C2CC]/60 mb-4 md:mb-0">
-            &copy; 2025 quantum Edge Solutions. All rights reserved.
+            &copy; 2025 Quantum Edge Solution LLC. 
           </p>
-          <div className="flex space-x-6 text-[#C2C2CC]/60">
-            <button className="hover:text-[#00D0FF] transition-colors">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-[#C2C2CC]/60">
+            <button
+              onClick={() => onNavigate("privacy-policy")}
+              className="hover:text-[#00D0FF] transition-colors"
+            >
               Privacy Policy
             </button>
-            <button className="hover:text-[#00D0FF] transition-colors">
+            <button
+              onClick={() => onNavigate("terms-of-service")}
+              className="hover:text-[#00D0FF] transition-colors"
+            >
               Terms of Service
             </button>
+            <button
+              onClick={() => onNavigate("refund-policy")}
+              className="hover:text-[#00D0FF] transition-colors"
+            >
+              Refund Policy
+            </button>
+            <CookieSettingsButton />
             <button
               onClick={() => onNavigate("admin")}
               className="hover:text-[#00D0FF] transition-colors opacity-50 hover:opacity-100"

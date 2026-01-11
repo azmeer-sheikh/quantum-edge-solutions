@@ -139,7 +139,7 @@ export function BCSFooter() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/70 text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Business Communication Solutions. All rights reserved.
+            &copy; {new Date().getFullYear()} Business Communication Solutions.
           </p>
           
           <button

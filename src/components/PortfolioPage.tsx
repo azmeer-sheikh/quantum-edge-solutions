@@ -144,11 +144,11 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">500+</div>
+              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">50+</div>
               <div className="text-[#C2C2CC] text-sm">Projects Completed</div>
             </div>
             <div>
-              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">$50M+</div>
+              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">$2M+</div>
               <div className="text-[#C2C2CC] text-sm">Revenue Generated</div>
             </div>
             <div>
