@@ -57,8 +57,8 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
   // Managed Services Packages (Labor/Retainers)
   const managedPackages = [
     {
-      name: 'Local SEO',
-      price: '$1,500',
+      name: 'Starter',
+      price: '$799',
       period: '/month',
       type: 'retainer',
       description: 'Perfect for local businesses targeting specific service areas',
@@ -72,13 +72,13 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
       ],
     },
     {
-      name: 'Growth SEO',
-      price: '$3,500',
+      name: 'Business',
+      price: '$1,599',
       period: '/month',
       type: 'retainer',
       description: 'For growing businesses ready to scale organic traffic',
       features: [
-        'Everything in Local SEO',
+        'Everything in Starter',
         'Technical SEO Audit & Fixes',
         'Content Strategy (4 posts/mo)',
         'Link Building (10 links/mo)',
@@ -88,13 +88,13 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
       featured: true,
     },
     {
-      name: 'Enterprise SEO',
-      price: '$7,500',
-      period: '/month',
+      name: 'Enterprise',
+      price: 'Custom Pricing',
+      period: '',
       type: 'retainer',
-      description: 'Full-scale SEO for maximum organic visibility',
+      description: 'Full-scale SEO for maximum organic visibility - Pricing based on your specific needs',
       features: [
-        'Everything in Growth SEO',
+        'Everything in Business',
         'Advanced Technical Optimization',
         'Content Strategy (8+ posts/mo)',
         'Premium Link Building (25+ links/mo)',

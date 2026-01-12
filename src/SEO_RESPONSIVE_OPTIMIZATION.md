@@ -92,7 +92,7 @@ img, video, canvas, svg {
   "name": "Quantum Edge Solutions",
   "address": "7838 Malton Ln, Worthington, OH 43085, USA",
   "phone": "+1 (614) 405-5814",
-  "email": "contact@quantumedge.io"
+  "email": "support@quantumedgesolution.org"
 }
 ```
 
@@ -272,7 +272,7 @@ button, a, [role="button"] {
 - Business name: Quantum Edge Solutions
 - Address: 7838 Malton Ln, Worthington, OH 43085
 - Phone: +1 (614) 405-5814
-- Email: contact@quantumedge.io
+- Email: support@quantumedgesolution.org
 - Website: quantumedge.com
 
 ---

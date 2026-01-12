@@ -24,12 +24,7 @@ export function AnimatedHeroMetrics() {
       label: 'Accuracy',
       color: '#75FF00'
     },
-    { 
-      icon: <Database className="w-8 h-8" />, 
-      value: '10M+', 
-      label: 'Data Points/Day',
-      color: '#00D0FF'
-    },
+
   ];
 
   useEffect(() => {

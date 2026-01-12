@@ -58,7 +58,7 @@ export function WebDesignPage({ onNavigate }: WebDesignPageProps) {
   const managedPackages = [
     {
       name: 'Starter',
-      price: '$3,500',
+      price: '$799',
       period: 'one-time',
       type: 'project',
       description: 'Perfect for small businesses and startups',
@@ -73,7 +73,7 @@ export function WebDesignPage({ onNavigate }: WebDesignPageProps) {
     },
     {
       name: 'Business',
-      price: '$7,500',
+      price: '$1599',
       period: 'one-time',
       type: 'project',
       description: 'For growing businesses needing more features',
@@ -90,8 +90,8 @@ export function WebDesignPage({ onNavigate }: WebDesignPageProps) {
     },
     {
       name: 'Enterprise',
-      price: '$15,000+',
-      period: 'one-time',
+      price: 'Custom Pricing',
+      period: '',
       type: 'project',
       description: 'Full-scale web solutions for large organizations',
       features: [

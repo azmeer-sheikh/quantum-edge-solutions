@@ -83,7 +83,7 @@ Your Contact Page is now a **premium, enterprise-grade** component with a futuri
 ### 4. **Contact Info Sidebar**
 
 **4 Info Cards:**
-1. **Email** - contact@quantumedge.io, enterprise@quantumedge.io
+1. **Email** - support@quantumedgesolution.org, support@quantumedgesolution.org
 2. **Phone** - +1 (614) 405-5814, 24/7 support
 3. **Office** - 7838 Malton Ln, Worthington, OH 43085
 4. **Hours** - Mon-Fri 9am-6pm EST, 24/7 enterprise support

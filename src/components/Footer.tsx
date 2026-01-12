@@ -172,10 +172,10 @@ export function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="flex-shrink-0 text-[#00D0FF]" />
                 <a
-                  href="mailto:contact@quantumedgesolution.org"
+                  href="mailto:support@quantumedgesolution.org"
                   className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
                 >
-                  contact@quantumedgesolution.org
+                  support@quantumedgesolution.org
                 </a>
               </li>
             </ul>
@@ -185,7 +185,7 @@ export function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar */}
         <div className="border-t border-[#00D0FF]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-[#C2C2CC]/60 mb-4 md:mb-0">
-            &copy; 2025 Quantum Edge Solution LLC. 
+            &copy; 2026-27 Quantum Edge Solution LLC. 
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-[#C2C2CC]/60">
             <button

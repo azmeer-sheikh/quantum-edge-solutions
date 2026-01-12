@@ -104,7 +104,7 @@ export function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["contact@quantumedgesolution.org", "enterprise@quantumedgesolution.org"],
+      details: ["support@quantumedgesolution.org", ""],
     },
     {
       icon: <Phone className="w-6 h-6" />,

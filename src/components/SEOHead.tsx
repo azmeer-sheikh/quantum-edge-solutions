@@ -66,7 +66,7 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
     name: 'Quantum Edge Solution LLC',
     url: 'https://quantumedgesolution.org',
     logo: 'https://quantumedgesolution.org/logo.png',
-    email: 'contact@quantumedgesolution.org',
+    email: 'support@quantumedgesolution.org',
     phone: '+1 (614) 405-5814',
     address: {
       streetAddress: 'Fort Worth',

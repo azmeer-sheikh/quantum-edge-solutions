@@ -110,7 +110,7 @@ export function RefundPolicyPage({ onNavigate }: RefundPolicyPageProps) {
               <div className="text-[#C2C2CC] space-y-4">
                 <p>To request a refund or cancellation:</p>
                 <ol className="list-decimal pl-6 space-y-2">
-                  <li>Email us at <a href="mailto:contact@quantumedgesolution.org" className="text-[#00D0FF] hover:text-[#75FF00]">contact@quantumedgesolution.org</a> with your request</li>
+                  <li>Email us at <a href="mailto:support@quantumedgesolution.org" className="text-[#00D0FF] hover:text-[#75FF00]">support@quantumedgesolution.org</a> with your request</li>
                   <li>Include your account information and order/invoice number</li>
                   <li>Provide a brief explanation for the refund request</li>
                   <li>Our team will respond within 2-3 business days</li>
@@ -130,7 +130,7 @@ export function RefundPolicyPage({ onNavigate }: RefundPolicyPageProps) {
                 <p><strong className="text-white">Quantum Edge Solution LLC</strong><br />
                 7838 Malton Lane, Appt 22
 Worthington, Columbus, Ohio 43085<br />
-                Email: <a href="mailto:contact@quantumedgesolution.org" className="text-[#00D0FF] hover:text-[#75FF00]">contact@quantumedgesolution.org</a><br />
+                Email: <a href="mailto:support@quantumedgesolution.org" className="text-[#00D0FF] hover:text-[#75FF00]">support@quantumedgesolution.org</a><br />
                 Phone: +1 (614) 405-5814</p>
               </div>
             </div>

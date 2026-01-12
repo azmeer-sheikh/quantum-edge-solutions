@@ -198,7 +198,7 @@ All horizontal scrolling issues have been **eliminated** and your website is now
 - SEO_RESPONSIVE_OPTIMIZATION.md - Technical details
 
 **Contact:**
-- Email: contact@quantumedge.io
+- Email: support@quantumedgesolution.org
 - Phone: +1 (614) 405-5814
 
 ---

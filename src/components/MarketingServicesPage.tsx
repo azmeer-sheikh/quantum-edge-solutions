@@ -58,7 +58,7 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
   const managedPackages = [
     {
       name: 'Starter',
-      price: '$2,500',
+      price: '$799',
       period: '/month',
       type: 'retainer',
       description: 'Essential marketing for small businesses',
@@ -72,7 +72,7 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
     },
     {
       name: 'Growth',
-      price: '$5,000',
+      price: '$1,599',
       period: '/month',
       type: 'retainer',
       description: 'Comprehensive marketing for scaling businesses',
@@ -88,8 +88,8 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
     },
     {
       name: 'Enterprise',
-      price: '$10,000+',
-      period: '/month',
+      price: 'Custom Pricing',
+      period: '',
       type: 'retainer',
       description: 'Full-service marketing for maximum growth',
       features: [

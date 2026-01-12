@@ -165,7 +165,7 @@ Touch action: manipulation
 - **Name:** Quantum Edge Solutions
 - **Address:** 7838 Malton Ln, Worthington, OH 43085, USA
 - **Phone:** +1 (614) 405-5814
-- **Email:** contact@quantumedge.io
+- **Email:** support@quantumedgesolution.org
 
 **LocalBusiness Schema:**
 - Professional Service type
@@ -297,7 +297,7 @@ Touch action: manipulation
 - PageSpeed: pagespeed.web.dev
 
 **Contact:**
-- Email: contact@quantumedge.io
+- Email: support@quantumedgesolution.org
 - Phone: +1 (614) 405-5814
 
 ---
