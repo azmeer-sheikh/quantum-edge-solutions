@@ -5,7 +5,7 @@ interface LogoProps {
   variant?: 'full' | 'icon' | 'text';
 }
 
-export function Logo({ className = "w-10 h-10", variant = 'icon' }: LogoProps) {
+export function Logo({ className = "w-30 h-10", variant = 'icon' }: LogoProps) {
   if (variant === 'text') {
     return (
       <div className="flex flex-col items-start">

@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Cookie } from "lucide-react";
 import { CookieSettingsButton } from './CookieConsent';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -12,18 +13,8 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#00D0FF] to-[#75FF00] rounded-lg flex items-center justify-center">
-                <span className="text-[#14141A] font-bold text-xl">QE</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold leading-tight">
-                  QUANTUM
-                </span>
-                <span className="text-[#75FF00] font-bold leading-tight">
-                  EDGE
-                </span>
-              </div>
+            <div className="mb-4">
+              <Logo variant="icon" className="w-48 h-auto" />
             </div>
             <p className="text-[#C2C2CC]/80 mb-4 text-sm">
               Full-stack digital marketing, automation, and SaaS solutions for
@@ -164,9 +155,9 @@ export function Footer({ onNavigate }: FooterProps) {
                   className="flex-shrink-0 mt-1 text-[#00D0FF]"
                 />
                 <span className="text-[#C2C2CC]/80">
-                  Fort Worth, TX
+                  7838 Malton Lane, Appt 22
                   <br />
-                  United States
+                  Worthington, Columbus, Ohio 43085
                 </span>
               </li>
               <li className="flex items-center space-x-2">
