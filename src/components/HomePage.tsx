@@ -86,7 +86,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const metrics = [
     { value: '50+', label: 'Clients Served', icon: <Database className="w-6 h-6" /> },
     { value: '95%', label: 'Client Retention', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '$2M+', label: 'Revenue Generated', icon: <BarChart className="w-6 h-6" /> },
+    // { value: '$2M+', label: 'Revenue Generated', icon: <BarChart className="w-6 h-6" /> },
     { value: '24/7', label: 'System Uptime', icon: <Cpu className="w-6 h-6" /> },
   ];
 
@@ -167,7 +167,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-[#00D0FF]/5 to-[#75FF00]/5" />
         </MobileOptimizedWrapper>
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative" style={{ zIndex: 1 }}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-12">
             {metrics.map((metric, index) => (
               <MobileOptimizedWrapper
                 key={index}

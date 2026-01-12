@@ -312,7 +312,7 @@ export function WebDesignPage({ onNavigate }: WebDesignPageProps) {
                   <div className="text-xs text-[#00D0FF] font-mono mb-2 uppercase">One-Time Project</div>
                   <CardTitle className="text-white text-2xl">{pkg.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-[#75FF00] text-4xl font-bold">{pkg.price}</span>
+                    <span className={`font-bold ${pkg.price === 'Custom Pricing' ? 'text-[#75FF00] text-2xl' : 'text-[#75FF00] text-4xl'}`}>{pkg.price}</span>
                     <span className="text-[#C2C2CC] text-sm ml-1">{pkg.period}</span>
                   </div>
                   <p className="text-[#C2C2CC] text-sm mt-2">{pkg.description}</p>

@@ -31,6 +31,23 @@ export default function App() {
     const path = window.location.pathname;
     const hash = window.location.hash.replace('#', '');
     
+    // Page slug mapping
+    const pageMap: Record<string, string> = {
+      '/': 'home',
+      '/home': 'home',
+      '/services': 'services',
+      '/seo-services': 'seo-services',
+      '/web-design': 'web-design',
+      '/marketing-services': 'marketing-services',
+      '/about': 'about',
+      '/portfolio': 'portfolio',
+      '/blog': 'blog',
+      '/contact': 'contact',
+      '/privacy-policy': 'privacy-policy',
+      '/terms-of-service': 'terms-of-service',
+      '/refund-policy': 'refund-policy',
+    };
+
     // Handle clean URL paths
     if (path.startsWith('/bussiness-communication-solution/')) {
       const citySlug = path.replace('/bussiness-communication-solution/', '');
@@ -42,29 +59,26 @@ export default function App() {
         setCurrentPage('bussiness-communication-solution/austin');
       }
     }
-    // Support hash routing for backward compatibility and admin
+    // Admin routes still use hash
     else if (hash === 'admin' || hash === 'admin-setup') {
       setCurrentPage(hash);
     }
-    else if (hash.startsWith('bussiness-communication-solution/')) {
-      const citySlug = hash.replace('bussiness-communication-solution/', '');
-      if (citySlug) {
-        // Redirect hash to clean URL
-        window.history.replaceState(null, '', `/bussiness-communication-solution/${citySlug}`);
-        setCurrentPage(`bussiness-communication-solution/${citySlug}`);
-      } else {
-        // Default to Austin
-        window.history.replaceState(null, '', '/bussiness-communication-solution/austin');
-        setCurrentPage('bussiness-communication-solution/austin');
-      }
+    // Handle regular pages with slug-based routing
+    else if (pageMap[path]) {
+      setCurrentPage(pageMap[path]);
     }
-    else if (hash === 'bussiness-communication-solution' || path === '/bussiness-communication-solution') {
-      // Default to Austin when only base path is provided
-      window.history.replaceState(null, '', '/bussiness-communication-solution/austin');
-      setCurrentPage('bussiness-communication-solution/austin');
-    }
-    else if (hash) {
+    // Legacy hash support - redirect to clean URLs
+    else if (hash && pageMap[`/${hash}`]) {
+      window.history.replaceState(null, '', `/${hash}`);
       setCurrentPage(hash);
+    }
+    // Default to home for root path
+    else if (path === '/' || path === '') {
+      setCurrentPage('home');
+    }
+    // 404 for unknown routes
+    else {
+      setCurrentPage('404');
     }
 
     // Log admin access info to console
@@ -72,7 +86,7 @@ export default function App() {
     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #75FF00;');
     console.log('%c📍 Admin Login:', 'color: #00D0FF; font-weight: bold;', 'window.location.hash = "admin"');
     console.log('%c📍 Admin Setup:', 'color: #00D0FF; font-weight: bold;', 'window.location.hash = "admin-setup"');
-    console.log('%c📍 Contact Form:', 'color: #00D0FF; font-weight: bold;', 'window.location.hash = "contact"');
+    console.log('%c📍 Contact Form:', 'color: #00D0FF; font-weight: bold;', '/contact');
     console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #75FF00;');
     console.log('%c💡 Tip:', 'color: #75FF00; font-weight: bold;', 'Click "Admin" in footer for quick access');
     console.log('%c📖 Docs:', 'color: #75FF00; font-weight: bold;', 'See ADMIN_CREDENTIALS.md for full guide');
@@ -86,19 +100,20 @@ export default function App() {
       if (newPath.startsWith('/bussiness-communication-solution/')) {
         const citySlug = newPath.replace('/bussiness-communication-solution/', '');
         setCurrentPage(`bussiness-communication-solution/${citySlug || 'austin'}`);
-      } else if (newHash === 'admin' || newHash === 'admin-setup' ||
-          newHash.startsWith('bussiness-communication-solution/')) {
+      } else if (newHash === 'admin' || newHash === 'admin-setup') {
         setCurrentPage(newHash);
-      } else if (newHash) {
-        setCurrentPage(newHash);
+      } else if (pageMap[newPath]) {
+        setCurrentPage(pageMap[newPath]);
+      } else if (newPath === '/' || newPath === '') {
+        setCurrentPage('home');
+      } else {
+        setCurrentPage('404');
       }
     };
 
     window.addEventListener('popstate', handlePopState);
-    window.addEventListener('hashchange', handlePopState);
     return () => {
       window.removeEventListener('popstate', handlePopState);
-      window.removeEventListener('hashchange', handlePopState);
     };
   }, []);
 
@@ -113,9 +128,18 @@ export default function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
         setIsLoading(false);
       }, 300);
-    } else {
+    }
+    // Admin pages use hash routing
+    else if (page === 'admin' || page === 'admin-setup') {
       setCurrentPage(page);
       window.location.hash = page;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // All other pages use clean slug URLs
+    else {
+      setCurrentPage(page);
+      const path = page === 'home' ? '/' : `/${page}`;
+      window.history.pushState(null, '', path);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };

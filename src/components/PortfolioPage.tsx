@@ -142,15 +142,15 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
       {/* Stats Section */}
       <section className="py-12 bg-[#1A1A22] border-y border-[#00D0FF]/20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-16 lg:gap-24 text-center">
             <div>
               <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">50+</div>
               <div className="text-[#C2C2CC] text-sm">Projects Completed</div>
             </div>
-            <div>
+            {/* <div>
               <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">$2M+</div>
               <div className="text-[#C2C2CC] text-sm">Revenue Generated</div>
-            </div>
+            </div> */}
             <div>
               <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">98%</div>
               <div className="text-[#C2C2CC] text-sm">Client Retention</div>

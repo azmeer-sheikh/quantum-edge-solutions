@@ -104,17 +104,17 @@ export function AboutPage() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <Card className="bg-[#1A1A22] border-[#00D0FF]/30">
+              {/* <Card className="bg-[#1A1A22] border-[#00D0FF]/30">
                 <CardContent className="pt-6 text-center">
                   <TrendingUp className="w-8 h-8 text-[#00D0FF] mx-auto mb-3" />
-                  <div className="text-[#75FF00] font-mono text-3xl mb-2">$50M+</div>
+                  <div className="text-[#75FF00] font-mono text-3xl mb-2">$2M+</div>
                   <div className="text-[#C2C2CC] text-sm">Revenue Generated</div>
                 </CardContent>
-              </Card>
+              </Card> */}
               <Card className="bg-[#1A1A22] border-[#00D0FF]/30">
                 <CardContent className="pt-6 text-center">
                   <Users className="w-8 h-8 text-[#00D0FF] mx-auto mb-3" />
-                  <div className="text-[#75FF00] font-mono text-3xl mb-2">500+</div>
+                  <div className="text-[#75FF00] font-mono text-3xl mb-2">50+</div>
                   <div className="text-[#C2C2CC] text-sm">Enterprise Clients</div>
                 </CardContent>
               </Card>
@@ -165,43 +165,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-[#14141A] hex-pattern relative">
-        <LogoDecorative position="bottom-right" className="w-44 h-44" />
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-1 bg-[#00D0FF]/10 border border-[#00D0FF]/30 rounded-md">
-              <span className="text-[#00D0FF] text-sm font-mono">LEADERSHIP</span>
-            </div>
-            <h2 className="text-white mb-4 text-4xl">Executive Team</h2>
-            <p className="text-[#C2C2CC] text-xl">
-              Industry veterans from leading tech companies
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="bg-[#1A1A22] border-[#00D0FF]/20 hover:border-[#00D0FF] transition-all overflow-hidden group">
-                <CardContent className="pt-6 text-center">
-                  <div className="relative mb-4 overflow-hidden rounded-lg">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#14141A] to-transparent opacity-50"></div>
-                  </div>
-                  <h3 className="text-white mb-1">{member.name}</h3>
-                  <p className="text-[#00D0FF] mb-2 text-sm font-mono">{member.role}</p>
-                  <p className="text-[#C2C2CC] text-xs mb-3">{member.bio}</p>
-                  <div className="pt-3 border-t border-[#00D0FF]/20">
-                    <p className="text-[#75FF00] text-xs font-mono">{member.expertise}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Technology Stack */}
       <section className="py-20 bg-[#1A1A22]">
@@ -222,10 +185,10 @@ export function AboutPage() {
                   <Database className="w-8 h-8 text-[#00D0FF] mb-4" />
                   <h4 className="text-white mb-3">Data Layer</h4>
                   <ul className="space-y-2 text-sm text-[#C2C2CC]">
-                    <li className="font-mono">PostgreSQL</li>
-                    <li className="font-mono">Redis</li>
-                    <li className="font-mono">Elasticsearch</li>
-                    <li className="font-mono">Apache Kafka</li>
+                    <li className="font-mono flex items-center gap-2"><Database className="w-4 h-4 text-[#00D0FF]" />PostgreSQL</li>
+                    <li className="font-mono flex items-center gap-2"><Zap className="w-4 h-4 text-[#00D0FF]" />Redis</li>
+                    <li className="font-mono flex items-center gap-2"><Target className="w-4 h-4 text-[#00D0FF]" />Elasticsearch</li>
+                    <li className="font-mono flex items-center gap-2"><TrendingUp className="w-4 h-4 text-[#00D0FF]" />Apache Kafka</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -234,10 +197,10 @@ export function AboutPage() {
                   <Code className="w-8 h-8 text-[#00D0FF] mb-4" />
                   <h4 className="text-white mb-3">Application</h4>
                   <ul className="space-y-2 text-sm text-[#C2C2CC]">
-                    <li className="font-mono">React / Node.js</li>
-                    <li className="font-mono">Python / FastAPI</li>
-                    <li className="font-mono">GraphQL</li>
-                    <li className="font-mono">TensorFlow</li>
+                    <li className="font-mono flex items-center gap-2"><Code className="w-4 h-4 text-[#00D0FF]" />React / Node.js</li>
+                    <li className="font-mono flex items-center gap-2"><Code className="w-4 h-4 text-[#00D0FF]" />Python / FastAPI</li>
+                    <li className="font-mono flex items-center gap-2"><Database className="w-4 h-4 text-[#00D0FF]" />GraphQL</li>
+                    <li className="font-mono flex items-center gap-2"><Target className="w-4 h-4 text-[#00D0FF]" />TensorFlow</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -246,10 +209,10 @@ export function AboutPage() {
                   <Shield className="w-8 h-8 text-[#00D0FF] mb-4" />
                   <h4 className="text-white mb-3">Infrastructure</h4>
                   <ul className="space-y-2 text-sm text-[#C2C2CC]">
-                    <li className="font-mono">AWS / GCP</li>
-                    <li className="font-mono">Kubernetes</li>
-                    <li className="font-mono">Docker</li>
-                    <li className="font-mono">Terraform</li>
+                    <li className="font-mono flex items-center gap-2"><Shield className="w-4 h-4 text-[#00D0FF]" />AWS / GCP</li>
+                    <li className="font-mono flex items-center gap-2"><Database className="w-4 h-4 text-[#00D0FF]" />Kubernetes</li>
+                    <li className="font-mono flex items-center gap-2"><Shield className="w-4 h-4 text-[#00D0FF]" />Docker</li>
+                    <li className="font-mono flex items-center gap-2"><Code className="w-4 h-4 text-[#00D0FF]" />Terraform</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -271,6 +234,7 @@ export function AboutPage() {
                 key={index}
                 className="bg-[#1A1A22] border border-[#00D0FF]/20 hover:border-[#00D0FF] rounded-lg p-4 transition-all hover:glow-cyan cursor-default"
               >
+                <Award className="w-6 h-6 text-[#00D0FF] mx-auto mb-2" />
                 <p className="text-[#C2C2CC] text-xs font-mono text-center">{cert}</p>
               </div>
             ))}
