@@ -170,7 +170,7 @@ export function AppDevFeatures() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { value: '50+', label: 'Apps Launched' },
-              { value: '5M+', label: 'Total Downloads' },
+              { value: '+500K', label: 'Total Downloads' },
               { value: '4.8★', label: 'Average Rating' },
               { value: '99.9%', label: 'Uptime SLA' },
             ].map((metric, index) => (
