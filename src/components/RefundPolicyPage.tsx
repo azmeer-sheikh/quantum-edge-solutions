@@ -17,7 +17,7 @@ export function RefundPolicyPage({ onNavigate }: RefundPolicyPageProps) {
           </div>
           <h1 className="text-white mb-6 text-4xl md:text-5xl font-bold">Refund & Cancellation Policy</h1>
           <p className="text-[#C2C2CC] text-lg max-w-2xl mx-auto">
-            Last updated: January 1, 2025
+            Last updated: January 12, 2026
           </p>
         </div>
       </section>
