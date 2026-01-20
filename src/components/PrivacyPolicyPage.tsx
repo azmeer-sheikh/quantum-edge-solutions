@@ -121,8 +121,8 @@ export function PrivacyPolicyPage({ onNavigate }: PrivacyPolicyPageProps) {
               <div className="text-[#C2C2CC] space-y-4">
                 <p>If you have questions about this Privacy Policy, please contact us:</p>
                 <p><strong className="text-white">Quantum Edge Solution LLC</strong><br />
-                7838 Malton Lane, Appt 22
-Worthington, Columbus, Ohio 43085<br />
+                2833 Crockett Street Ste 1113, Fort Worth, TX, USA<br />
+                7838 Malton Lane, Appt 22, Worthington, Columbus, Ohio 43085<br />
                 Email: <a href="mailto:support@quantumedgesolution.org" className="text-[#00D0FF] hover:text-[#75FF00]">support@quantumedgesolution.org</a><br />
                 Phone: +1 (614) 405-5814</p>
               </div>

@@ -114,7 +114,7 @@ export function ContactPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Office",
-      details: ["Fort Worth, TX", "United States"],
+      details: ["2833 Crockett Street Ste 1113, Fort Worth, TX, USA", "7838 Malton Lane, Appt 22, Worthington, Columbus, Ohio 43085"],
     },
     {
       icon: <Clock className="w-6 h-6" />,
