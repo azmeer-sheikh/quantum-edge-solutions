@@ -17,8 +17,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <Logo variant="icon" className="w-48 h-auto" />
             </div>
             <p className="text-[#C2C2CC]/80 mb-4 text-sm">
-              Full-stack digital marketing, automation, and SaaS solutions for
-              B2B enterprises.
+              Hive Tech Solution is a DBA of Quantum Edge Solutions.
             </p>
             <div className="flex space-x-4">
               <a
