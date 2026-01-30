@@ -13,6 +13,7 @@ import { AboutPage } from './components/AboutPage';
 import { PortfolioPage } from './components/PortfolioPage';
 import { BlogPage } from './components/BlogPage';
 import { ContactPage } from './components/ContactPage';
+import { PricingPage } from './components/PricingPage';
 import { AdminPage } from './components/AdminPage';
 import { AdminSetup } from './components/AdminSetup';
 import { NotFoundPage } from './components/NotFoundPage';
@@ -39,6 +40,7 @@ export default function App() {
       '/seo-services': 'seo-services',
       '/web-design': 'web-design',
       '/marketing-services': 'marketing-services',
+      '/pricing': 'pricing',
       '/about': 'about',
       '/portfolio': 'portfolio',
       '/blog': 'blog',
@@ -177,6 +179,8 @@ export default function App() {
         return <WebDesignPage onNavigate={handleNavigate} />;
       case 'marketing-services':
         return <MarketingServicesPage onNavigate={handleNavigate} />;
+      case 'pricing':
+        return <PricingPage />;
       case 'about':
         return <AboutPage />;
       case 'portfolio':
@@ -207,7 +211,7 @@ export default function App() {
     }
   };
 
-  const validMainPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'about', 'portfolio', 'blog', 'contact', 'privacy-policy', 'terms-of-service', 'refund-policy'];
+  const validMainPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'pricing', 'about', 'portfolio', 'blog', 'contact', 'privacy-policy', 'terms-of-service', 'refund-policy'];
 
   return (
     <>

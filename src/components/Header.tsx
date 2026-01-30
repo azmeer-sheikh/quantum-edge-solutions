@@ -29,6 +29,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
     { name: 'Home', path: 'home' },
     { name: 'Platform', path: 'about', hasDropdown: false },
     { name: 'Services', path: 'services', hasDropdown: true },
+    { name: 'Pricing', path: 'pricing' },
     { name: 'Case Studies', path: 'portfolio' },
     { name: 'Insights', path: 'blog' },
     { name: 'Contact', path: 'contact' },
