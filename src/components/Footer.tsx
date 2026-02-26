@@ -169,6 +169,15 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </li>
               <li className="flex items-center space-x-2">
+                <Phone size={16} className="flex-shrink-0 text-[#00D0FF]" />
+                <a
+                  href="tel:8178866699"
+                  className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
+                >
+                  +1 (817) 886-6699
+                </a>
+              </li>
+              <li className="flex items-center space-x-2">
                 <Mail size={16} className="flex-shrink-0 text-[#00D0FF]" />
                 <a
                   href="mailto:support@quantumedgesolution.org"
