@@ -156,7 +156,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 <span className="text-[#C2C2CC]/80">
                   2833 Crockett Street Ste 1113, Fort Worth, TX, USA
                   <br />
-                  7838 Malton Lane, Appt 22, Worthington, Columbus, Ohio 43085
+                  7838 Malton Lane, Apt 22, Worthington, Ohio 43085
                 </span>
               </li>
               <li className="flex items-center space-x-2">
@@ -193,7 +193,7 @@ export function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar */}
         <div className="border-t border-[#00D0FF]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-[#C2C2CC]/60 mb-4 md:mb-0">
-            &copy; 2026-27 Quantum Edge Solution LLC. 
+            &copy; 2026-27 Quantum Edge Solution LLC.
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-[#C2C2CC]/60">
             <button
