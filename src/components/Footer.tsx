@@ -154,8 +154,6 @@ export function Footer({ onNavigate }: FooterProps) {
                   className="flex-shrink-0 mt-1 text-[#00D0FF]"
                 />
                 <span className="text-[#C2C2CC]/80">
-                  2833 Crockett Street Ste 1113, Fort Worth, TX, USA
-                  <br />
                   7838 Malton Lane, Apt 22, Worthington, Ohio 43085
                 </span>
               </li>
