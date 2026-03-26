@@ -46,7 +46,7 @@ export function ClientTestimonials() {
     <section className="py-12 md:py-16 lg:py-20 bg-[#14141A] relative overflow-hidden hex-pattern">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00D0FF]/5 to-transparent pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
@@ -58,7 +58,7 @@ export function ClientTestimonials() {
           >
             <span className="text-[#75FF00] text-xs md:text-sm font-mono">CLIENT SUCCESS</span>
           </motion.div>
-          
+
           <motion.h2
             className="text-white mb-3 md:mb-4 text-2xl md:text-3xl lg:text-4xl"
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export function ClientTestimonials() {
           >
             Trusted by Industry Leaders
           </motion.h2>
-          
+
           <motion.p
             className="text-[#C2C2CC] text-base md:text-lg lg:text-xl max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -118,18 +118,18 @@ export function ClientTestimonials() {
             >
               <Card className="bg-[#1A1A22] border-[#00D0FF]/20 hover:border-[#00D0FF] transition-all duration-300 h-full group relative overflow-hidden">
                 {/* Hover gradient effect */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: `linear-gradient(135deg, ${testimonial.color}20, transparent)`,
                   }}
                 />
-                
+
                 <CardContent className="pt-6 relative z-10">
                   {/* Industry Badge & Quote Icon */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-2">
-                      <div 
+                      <div
                         className="w-10 h-10 rounded-lg flex items-center justify-center border"
                         style={{
                           borderColor: `${testimonial.color}40`,
