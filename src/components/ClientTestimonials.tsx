@@ -6,61 +6,37 @@ export function ClientTestimonials() {
   const testimonials = [
     {
       name: 'James Patterson',
-      role: 'CEO',
-      company: 'SecureGuard Systems',
       industry: 'Security Services',
       icon: <Shield className="w-5 h-5" />,
       location: 'Miami, FL',
-      quote: 'Their marketing automation platform cut our response time from hours to minutes. We now handle 3x more inquiries with the same team size. The app they developed is enterprise-grade.',
-      results: [
-        { metric: '90%', label: 'Time Saved' },
-        { metric: '3x', label: 'More Leads' },
-      ],
+      quote: 'Their marketing automation platform made daily operations much smoother for our team. We respond faster, stay organized, and can handle incoming requests without the chaos we had before. The app feels stable and built for real business use.',
       rating: 5,
       color: '#00D0FF',
     },
     {
       name: 'Linda Martinez',
-      role: 'Director of Operations',
-      company: 'EcoClean Pro Services',
       industry: 'Cleaning Services',
       icon: <Zap className="w-5 h-5" />,
       location: 'Seattle, WA',
-      quote: 'From zero online presence to dominating our local market. Their SEO work is phenomenal - we\'re now ranking for over 150 keywords and getting 200+ organic visits daily.',
-      results: [
-        { metric: '+520%', label: 'Traffic' },
-        { metric: '150+', label: 'Keywords' },
-      ],
+      quote: 'From almost no online visibility to a steady flow of local leads, the difference has been clear. Their SEO strategy was practical, transparent, and tailored to our service area. We are finally showing up where our customers are searching.',
       rating: 5,
       color: '#75FF00',
     },
     {
       name: 'Robert Kim',
-      role: 'Founder',
-      company: 'Summit Roofing Contractors',
       industry: 'Roofing',
       icon: <TrendingUp className="w-5 h-5" />,
       location: 'Denver, CO',
-      quote: 'The mobile app they created revolutionized our field operations. Crew scheduling, job tracking, and customer communication all in one place. Our efficiency jumped 85%.',
-      results: [
-        { metric: '+85%', label: 'Efficiency' },
-        { metric: '$2.5M', label: 'Added Revenue' },
-      ],
+      quote: 'The mobile app they built changed how our field teams work day to day. Scheduling, job tracking, and customer updates are all in one place, which has made coordination much easier across crews.',
       rating: 5,
       color: '#00D0FF',
     },
     {
       name: 'Amanda Torres',
-      role: 'VP of Marketing',
-      company: 'PurePipe Plumbing',
       industry: 'Plumbing',
       icon: <Wrench className="w-5 h-5" />,
       location: 'Las Vegas, NV',
-      quote: 'Their Google My Business optimization was a game-changer. Emergency calls tripled and we\'re now the go-to plumber in our area. The social media campaigns drive constant engagement.',
-      results: [
-        { metric: '+310%', label: 'Calls' },
-        { metric: '4.9★', label: 'Google Rating' },
-      ],
+      quote: 'Their Google Business Profile and social campaigns helped us become more visible in the neighborhoods we serve. We now get more consistent service calls and better engagement from local homeowners.',
       rating: 5,
       color: '#75FF00',
     },
@@ -185,27 +161,9 @@ export function ClientTestimonials() {
                     "{testimonial.quote}"
                   </p>
 
-                  {/* Results Metrics */}
-                  <div className="grid grid-cols-2 gap-3 mb-6 pb-6 border-b border-[#00D0FF]/10">
-                    {testimonial.results.map((result, idx) => (
-                      <div key={idx} className="text-center">
-                        <div 
-                          className="font-mono text-lg mb-1"
-                          style={{ color: testimonial.color }}
-                        >
-                          {result.metric}
-                        </div>
-                        <div className="text-[#C2C2CC] text-xs">{result.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
                   {/* Client Info */}
                   <div>
                     <div className="text-white mb-1">{testimonial.name}</div>
-                    <div className="text-[#C2C2CC] text-sm mb-2">
-                      {testimonial.role}, {testimonial.company}
-                    </div>
                     <div className="flex items-center space-x-1 text-[#00D0FF] text-xs">
                       <MapPin className="w-3 h-3" />
                       <span>{testimonial.location}</span>

@@ -244,14 +244,6 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                       </span>
                     ))}
                   </div>
-
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#00D0FF]/30 text-[#00D0FF] hover:bg-[#00D0FF]/10 hover:text-white transition-all"
-                  >
-                    View Full Case Study
-                    <ArrowRight className="ml-2" size={16} />
-                  </Button>
                 </CardContent>
               </Card>
             ))}

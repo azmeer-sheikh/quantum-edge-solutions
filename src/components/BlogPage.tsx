@@ -241,16 +241,6 @@ export function BlogPage() {
               ))}
           </div>
 
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#00D0FF]/20 text-[#00D0FF] hover:bg-[#00D0FF]/10 hover:text-white px-8 font-medium"
-            >
-              Load More Articles
-            </Button>
-          </div>
         </div>
       </section>
 
