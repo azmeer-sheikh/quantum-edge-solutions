@@ -119,8 +119,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
     { id: 'marketing', label: 'Marketing' },
   ];
 
-  const filteredCases = selectedCategory === 'all' 
-    ? caseStudies 
+  const filteredCases = selectedCategory === 'all'
+    ? caseStudies
     : caseStudies.filter(cs => cs.category === selectedCategory);
 
   return (
@@ -176,8 +176,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                 variant={selectedCategory === category.id ? 'default' : 'outline'}
                 onClick={() => setSelectedCategory(category.id)}
                 className={
-                  selectedCategory === category.id 
-                    ? 'bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 font-medium' 
+                  selectedCategory === category.id
+                    ? 'bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 font-medium'
                     : 'border-[#00D0FF]/30 text-[#00D0FF] hover:bg-[#00D0FF]/10'
                 }
               >
@@ -189,8 +189,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           {/* Case Studies Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCases.map((study) => (
-              <Card 
-                key={study.id} 
+              <Card
+                key={study.id}
                 className="bg-[#1A1A22] border-[#00D0FF]/20 hover:border-[#00D0FF] transition-all overflow-hidden group shadow-lg hover:shadow-2xl hover:glow-cyan"
               >
                 <div className="relative h-48 overflow-hidden">
@@ -214,14 +214,14 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                     {study.title}
                   </h3>
                   <p className="text-[#C2C2CC] text-sm mb-1 font-mono">{study.client}</p>
-                  
+
                   <div className="my-4 pt-4 border-t border-[#00D0FF]/10">
                     <p className="text-[#C2C2CC] text-xs mb-2 font-semibold">CHALLENGE</p>
                     <p className="text-[#C2C2CC] text-sm mb-4 line-clamp-2">{study.challenge}</p>
                     <p className="text-[#C2C2CC] text-xs mb-2 font-semibold">SOLUTION</p>
                     <p className="text-[#C2C2CC] text-sm line-clamp-2">{study.solution}</p>
                   </div>
-                  
+
                   <div className="space-y-3 mb-6 pt-4 border-t border-[#00D0FF]/10">
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex justify-between items-center">
@@ -233,20 +233,20 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {study.technologies.slice(0, 3).map((tech, idx) => (
-                      <span 
-                        key={idx} 
+                      <span
+                        key={idx}
                         className="text-[#00D0FF] text-xs font-mono bg-[#00D0FF]/5 px-2 py-1 rounded border border-[#00D0FF]/20"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full border-[#00D0FF]/30 text-[#00D0FF] hover:bg-[#00D0FF]/10 hover:text-white transition-all"
                   >
                     View Full Case Study
@@ -266,8 +266,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           <p className="text-[#C2C2CC] text-xl mb-8 max-w-2xl mx-auto">
             Let's discuss how we can deliver similar results for your organization
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 glow-lime font-semibold px-8"
             onClick={() => onNavigate('contact')}
           >
