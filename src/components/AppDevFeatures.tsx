@@ -93,7 +93,7 @@ export function AppDevFeatures() {
           >
             <span className="text-[#75FF00] text-xs md:text-sm font-mono">MOBILE EXCELLENCE</span>
           </motion.div>
-          
+
           <motion.h2
             className="text-white mb-3 md:mb-4 text-2xl md:text-3xl lg:text-4xl"
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export function AppDevFeatures() {
           >
             Native & Cross-Platform Apps
           </motion.h2>
-          
+
           <motion.p
             className="text-[#C2C2CC] text-base md:text-lg lg:text-xl max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -167,10 +167,9 @@ export function AppDevFeatures() {
 
         {/* App Success Metrics */}
         <div className="mt-12 md:mt-16 bg-gradient-to-br from-[#00D0FF]/10 to-[#75FF00]/10 border border-[#00D0FF]/20 rounded-lg p-8 md:p-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-2xl mx-auto">
             {[
               { value: '50+', label: 'Apps Launched' },
-              { value: '+500K', label: 'Total Downloads' },
               { value: '4.8★', label: 'Average Rating' },
               { value: '99.9%', label: 'Uptime SLA' },
             ].map((metric, index) => (
@@ -186,6 +185,66 @@ export function AppDevFeatures() {
                   {metric.value}
                 </div>
                 <div className="text-[#C2C2CC] text-sm">{metric.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Client Reviews */}
+        <div className="mt-12 md:mt-16">
+          <motion.div
+            className="text-center mb-8 md:mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-block mb-3 px-3 md:px-4 py-1 bg-[#00D0FF]/10 border border-[#00D0FF]/30 rounded-md">
+              <span className="text-[#00D0FF] text-xs md:text-sm font-mono">CLIENT REVIEWS</span>
+            </div>
+            <h3 className="text-white text-2xl md:text-3xl mt-3">What Our Clients Say</h3>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                review:
+                  "Honestly wasn't sure what to expect going in — we're a small restaurant group, not a tech company. But the team walked us through everything step by step. The ordering app they built handles our three locations without any issues, and our staff picked it up faster than I thought they would. Would recommend to anyone looking to build something custom.",
+                name: 'Marcus Delgado',
+                location: 'Austin, TX',
+              },
+              {
+                review:
+                  "We came to them with a rough idea for a client booking and workout tracking app. What they delivered was better than I had imagined — clean, fast, and actually intuitive to use. My clients constantly comment on how polished it feels. The whole process took about three months from concept to launch and they kept us in the loop throughout.",
+                name: 'Priya Nair',
+                location: 'Chicago, IL',
+              },
+              {
+                review:
+                  "We'd tried two other dev shops before and both times ended up with something half-finished. This team was different — they actually understood what we needed for field service management and built it right the first time. Our technicians use the app daily for job assignments and parts tracking. It's made a real difference in how we operate.",
+                name: 'Derek Weston',
+                location: 'Phoenix, AZ',
+              },
+            ].map((review, index) => (
+              <motion.div
+                key={index}
+                className="bg-[#14141A] border border-[#00D0FF]/20 rounded-lg p-6 flex flex-col hover:border-[#75FF00]/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#75FF00] text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-[#C2C2CC] text-sm leading-relaxed flex-1 mb-6">
+                  "{review.review}"
+                </p>
+                <div className="border-t border-[#00D0FF]/10 pt-4">
+                  <div className="text-white text-sm font-medium">{review.name}</div>
+                  <div className="text-[#00D0FF] text-xs mt-1">📍 {review.location}</div>
+                </div>
               </motion.div>
             ))}
           </div>

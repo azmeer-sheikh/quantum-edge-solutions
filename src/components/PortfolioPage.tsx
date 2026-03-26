@@ -84,7 +84,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
       title: 'Enterprise Email Orchestration',
       client: 'GlobalReach Marketing',
       industry: 'Marketing Agency',
-      challenge: 'Managing 500K+ contacts across fragmented systems',
+      challenge: 'Managing 100K+ contacts across fragmented systems',
       solution: 'Unified email automation with AI personalization',
       results: [
         { metric: 'Email Volume', value: '10M+/mo', icon: <TrendingUp size={16} /> },
