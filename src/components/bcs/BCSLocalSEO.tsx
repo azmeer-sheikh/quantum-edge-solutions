@@ -8,7 +8,7 @@ interface BCSLocalSEOProps {
 
 export function BCSLocalSEO({ heading, paragraphs, cityName }: BCSLocalSEOProps) {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" id="about">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" id="platform">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Left Content */}
@@ -16,7 +16,7 @@ export function BCSLocalSEO({ heading, paragraphs, cityName }: BCSLocalSEOProps)
             <h2 className="mb-4 sm:mb-6 text-[#0B4F6C] px-2 sm:px-0">
               {heading}
             </h2>
-            
+
             <div className="space-y-3 sm:space-y-4 px-2 sm:px-0">
               {paragraphs.map((paragraph, index) => (
                 <p key={index} className="text-[#5A6C7D] leading-relaxed text-sm sm:text-base">
@@ -74,7 +74,7 @@ export function BCSLocalSEO({ heading, paragraphs, cityName }: BCSLocalSEOProps)
               <h3 className="mb-4 sm:mb-6 text-white text-lg sm:text-xl">
                 Why Choose Us?
               </h3>
-              
+
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start gap-2 sm:gap-3">
                   <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center bg-white/20 rounded-full mt-0.5">

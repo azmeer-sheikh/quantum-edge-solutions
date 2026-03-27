@@ -78,7 +78,7 @@ All navigation uses **smooth scroll** with:
 3. **Click "Why Choose Us"** → Should scroll to Benefits section
 4. **Click "Portfolio"** → Should scroll to Portfolio section
 5. **Click "Reviews"** → Should scroll to Testimonials section
-6. **Click "About"** → Should scroll to Local SEO/About section
+6. **Click "platform"** → Should scroll to Local SEO/About section
 7. **Click "Areas" → Select Another City** → Should navigate to that city's page and scroll to top
 8. **Click "Get a Quote"** → Should scroll to Contact form
 
