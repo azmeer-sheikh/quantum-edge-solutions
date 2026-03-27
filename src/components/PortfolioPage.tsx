@@ -152,7 +152,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
               <div className="text-[#C2C2CC] text-sm">Revenue Generated</div>
             </div> */}
             <div>
-              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">98%</div>
+              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">90%</div>
               <div className="text-[#C2C2CC] text-sm">Client Retention</div>
             </div>
             <div>

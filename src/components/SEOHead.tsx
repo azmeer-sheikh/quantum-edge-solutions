@@ -45,7 +45,7 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
     },
     portfolio: {
       title: 'Case Studies | Proven Digital Marketing Success Stories',
-      description: 'Real results from our digital marketing campaigns: 287% organic traffic growth, 320% social engagement, 2.5x lead generation. See our proven track record.',
+      description: 'Real results from our digital marketing campaigns: 70% organic traffic growth, 320% social engagement, 2.5x lead generation. See our proven track record.',
       keywords: 'marketing case studies, SEO results, digital marketing ROI, client success stories, B2B marketing results',
     },
     blog: {
@@ -61,7 +61,7 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
   };
 
   const meta = pageMeta[currentPage] || pageMeta.home;
-  
+
   const businessInfo = {
     name: 'Quantum Edge Solution LLC',
     url: 'https://quantumedgesolution.org',
@@ -129,20 +129,20 @@ export function SEOHead({ currentPage }: SEOHeadProps) {
     const updateMetaTag = (name: string, content: string, isProperty = false) => {
       const attribute = isProperty ? 'property' : 'name';
       let element = document.querySelector(`meta[${attribute}="${name}"]`);
-      
+
       if (!element) {
         element = document.createElement('meta');
         element.setAttribute(attribute, name);
         document.head.appendChild(element);
       }
-      
+
       element.setAttribute('content', content);
     };
 
     updateMetaTag('description', meta.description);
     updateMetaTag('keywords', meta.keywords);
     updateMetaTag('robots', 'index, follow, max-snippet:-1, max-image-preview:large');
-    
+
     let viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       viewport = document.createElement('meta');

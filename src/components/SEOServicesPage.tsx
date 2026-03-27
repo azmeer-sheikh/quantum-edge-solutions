@@ -176,8 +176,8 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
                 alt="SEO Analytics Dashboard"
                 className="rounded-lg shadow-2xl border border-[#00D0FF]/20"
               />
@@ -264,8 +264,8 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {managedPackages.map((pkg, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`bg-[#14141A] border-[#00D0FF]/20 relative ${pkg.featured ? 'border-[#75FF00] ring-2 ring-[#75FF00]/20' : 'hover:border-[#00D0FF]'} transition-all`}
               >
                 {pkg.featured && (
@@ -321,8 +321,8 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {softwarePackages.map((pkg, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`bg-[#1A1A22] border-[#75FF00]/20 relative ${pkg.featured ? 'border-[#00D0FF] ring-2 ring-[#00D0FF]/20' : 'hover:border-[#75FF00]'} transition-all`}
               >
                 {pkg.featured && (

@@ -50,8 +50,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
 
   return (
     <>
-      <header 
-        className="fixed top-0 left-0 right-0 bg-[#14141A] backdrop-blur-md border-b border-[#2A2A33] transition-all w-full overflow-visible" 
+      <header
+        className="fixed top-0 left-0 right-0 bg-[#14141A] backdrop-blur-md border-b border-[#2A2A33] transition-all w-full overflow-visible"
         style={{ zIndex: 50000, isolation: 'isolate' }}
       >
         <div className="container mx-auto px-4 py-3 sm:py-4 max-w-7xl w-full">
@@ -75,22 +75,21 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                       <button
                         onClick={() => setServicesOpen(!servicesOpen)}
                         className={`px-3 xl:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center gap-1
-                          ${
-                            isServicePage
-                              ? 'text-[#00D0FF] bg-[#00D0FF]/10'
-                              : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1F1F24]'
+                          ${isServicePage
+                            ? 'text-[#00D0FF] bg-[#00D0FF]/10'
+                            : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1F1F24]'
                           }`}
                       >
                         {item.name}
                         <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                       </button>
-                      
+
                       {/* Mega Menu Dropdown */}
                       {servicesOpen && (
-                        <div 
-                          className="absolute top-full left-0 mt-2 bg-[#14141A] border-2 border-[#00D0FF]/40 rounded-lg shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2" 
-                          style={{ 
-                            zIndex: 50002, 
+                        <div
+                          className="absolute top-full left-0 mt-2 bg-[#14141A] border-2 border-[#00D0FF]/40 rounded-lg shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2"
+                          style={{
+                            zIndex: 50002,
                             position: 'absolute',
                             width: '16vw',
                             minWidth: '280px',
@@ -136,10 +135,9 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                     <button
                       onClick={() => onNavigate(item.path)}
                       className={`px-3 xl:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200
-                        ${
-                          currentPage === item.path
-                            ? 'text-[#00D0FF] bg-[#00D0FF]/10'
-                            : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1F1F24]'
+                        ${currentPage === item.path
+                          ? 'text-[#00D0FF] bg-[#00D0FF]/10'
+                          : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1F1F24]'
                         }`}
                     >
                       {item.name}
@@ -179,10 +177,9 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                       <button
                         onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                         className={`flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-sm font-medium transition-all
-                          ${
-                            isServicePage
-                              ? 'text-[#00D0FF] bg-[#1F1F24] border-l-2 border-[#00D0FF]'
-                              : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1A1A1F]'
+                          ${isServicePage
+                            ? 'text-[#00D0FF] bg-[#1F1F24] border-l-2 border-[#00D0FF]'
+                            : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1A1A1F]'
                           }`}
                       >
                         {item.name}
@@ -224,10 +221,9 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                         setMobileMenuOpen(false);
                       }}
                       className={`block w-full text-left py-3 px-4 rounded-md text-sm font-medium transition-all
-                        ${
-                          currentPage === item.path
-                            ? 'text-[#00D0FF] bg-[#1F1F24] border-l-2 border-[#00D0FF]'
-                            : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1A1A1F]'
+                        ${currentPage === item.path
+                          ? 'text-[#00D0FF] bg-[#1F1F24] border-l-2 border-[#00D0FF]'
+                          : 'text-[#C2C2CC] hover:text-[#00D0FF] hover:bg-[#1A1A1F]'
                         }`}
                     >
                       {item.name}
@@ -248,11 +244,11 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           )}
         </div>
       </header>
-      
+
       {/* Spacer to prevent content overlap */}
       <div className="w-full invisible pointer-events-none" aria-hidden="true">
         <div className="container mx-auto px-4 py-3 sm:py-4 max-w-7xl w-full">
-           <div className="h-16 sm:h-18 md:h-20 lg:h-24" />
+          <div className="h-16 sm:h-18 md:h-20 lg:h-24" />
         </div>
         {/* Border offset - match border-b of header */}
         <div className="h-[1px]" />

@@ -96,19 +96,9 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    Unlock{" "}
-                    <span className="text-[#75FF00]">
-                      <TypewriterText
-                        words={[
-                          "SEO Dominance",
-                          "Digital Growth",
-                          "Marketing Automation",
-                          "Data Intelligence",
-                        ]}
-                      />
-                    </span>
+                      Unlock Growth with
                     <br />
-                    for Modern Businesses
+                    <span className="text-[#75FF00]">AI &amp; Voice Search SEO</span>
                   </motion.h1>
                 }
               >
@@ -118,19 +108,9 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  Unlock{" "}
-                  <span className="text-[#75FF00]">
-                    <TypewriterText
-                      words={[
-                        "SEO Dominance",
-                        "Digital Growth",
-                        "Marketing Automation",
-                        "Data Intelligence",
-                      ]}
-                    />
-                  </span>
+                  Unlock Growth with
                   <br />
-                  for Modern Businesses
+                  <span className="text-[#75FF00]">AI &amp; Voice Search SEO</span>
                 </motion.h1>
               </MobileOptimizedWrapper>
 
@@ -216,7 +196,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#75FF00] rounded-full" />
                   <span className="text-[#C2C2CC]">
-                    287% Organic Traffic Increase
+                    70% Organic Traffic Increase
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -227,7 +207,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#75FF00] rounded-full" />
-                  <span className="text-[#C2C2CC]">98% Client Retention</span>
+                  <span className="text-[#C2C2CC]">90% Client Retention</span>
                 </div>
               </motion.div>
             </div>
@@ -288,9 +268,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Dominate <span className="text-[#75FF00]">Local Search</span>
-                <br />
-                <span className="text-[#00D0FF]">Own Your Market</span>
+                Turn searches into <span className="text-[#75FF00]">Sales</span>
               </motion.h1>
 
               <motion.p
@@ -314,7 +292,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                 <div className="bg-[#1A1A22] border border-[#00D0FF]/20 rounded-lg p-4 backdrop-blur-sm">
                   <MapPin className="text-[#00D0FF] mb-2" size={24} />
                   <div className="text-[#75FF00] font-mono text-xl mb-1">
-                    300%
+                    80%
                   </div>
                   <div className="text-[#C2C2CC] text-sm">
                     Map Pack Visibility
@@ -339,7 +317,7 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                 <div className="bg-[#1A1A22] border border-[#75FF00]/20 rounded-lg p-4 backdrop-blur-sm">
                   <TrendingUp className="text-[#75FF00] mb-2" size={24} />
                   <div className="text-[#00D0FF] font-mono text-xl mb-1">
-                    450%
+                    60%
                   </div>
                   <div className="text-[#C2C2CC] text-sm">
                     Call Volume Increase
@@ -403,20 +381,20 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
                   {[
                     {
                       label: "Profile Views",
-                      value: "+543%",
+                      value: "+85%",
                       color: "#00D0FF",
                     },
                     {
                       label: "Website Clicks",
-                      value: "+387%",
+                      value: "+85%",
                       color: "#75FF00",
                     },
                     {
                       label: "Direction Requests",
-                      value: "+298%",
+                      value: "+70%",
                       color: "#00D0FF",
                     },
-                    { label: "Phone Calls", value: "+421%", color: "#75FF00" },
+                    { label: "Phone Calls", value: "+60%", color: "#75FF00" },
                   ].map((stat, idx) => (
                     <div key={idx}>
                       <div className="flex justify-between mb-2">
@@ -483,9 +461,8 @@ export function HeroCarousel({ onNavigate }: HeroCarouselProps) {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              currentSlide === index ? "bg-[#75FF00] w-8" : "bg-[#C2C2CC]/30"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${currentSlide === index ? "bg-[#75FF00] w-8" : "bg-[#C2C2CC]/30"
+              }`}
           />
         ))}
       </div>

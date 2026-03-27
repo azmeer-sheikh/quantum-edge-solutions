@@ -31,7 +31,7 @@ export default function App() {
   useEffect(() => {
     const path = window.location.pathname;
     const hash = window.location.hash.replace('#', '');
-    
+
     // Page slug mapping
     const pageMap: Record<string, string> = {
       '/': 'home',
@@ -98,7 +98,7 @@ export default function App() {
     const handlePopState = () => {
       const newPath = window.location.pathname;
       const newHash = window.location.hash.replace('#', '');
-      
+
       if (newPath.startsWith('/bussiness-communication-solution/')) {
         const citySlug = newPath.replace('/bussiness-communication-solution/', '');
         setCurrentPage(`bussiness-communication-solution/${citySlug || 'austin'}`);
@@ -150,7 +150,7 @@ export default function App() {
     // Handle BCS landing pages
     if (currentPage.startsWith('bussiness-communication-solution/')) {
       const citySlug = currentPage.replace('bussiness-communication-solution/', '');
-      
+
       // Map slugs to data keys
       const cityMap: Record<string, string> = {
         'austin': 'austin',
@@ -159,7 +159,7 @@ export default function App() {
         'leander': 'leander',
         'pflugerville': 'pflugerville'
       };
-      
+
       const dataKey = cityMap[citySlug];
       if (dataKey && bcsData[dataKey]) {
         return <BCSLandingPage data={bcsData[dataKey]} onNavigate={handleNavigate} />;
@@ -167,7 +167,7 @@ export default function App() {
       // Invalid BCS city - show 404
       return <NotFoundPage onNavigate={handleNavigate} />;
     }
-    
+
     switch (currentPage) {
       case 'home':
         return <HomePage onNavigate={handleNavigate} />;
@@ -218,21 +218,21 @@ export default function App() {
       <SEOHead currentPage={currentPage} />
       {isLoading && <BCSLoader />}
       <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
-        {currentPage !== 'admin' && 
-         currentPage !== 'admin-setup' && 
-         currentPage !== '404' &&
-         !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
-          <Header currentPage={currentPage} onNavigate={handleNavigate} />
-        )}
+        {currentPage !== 'admin' &&
+          currentPage !== 'admin-setup' &&
+          currentPage !== '404' &&
+          !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
+            <Header currentPage={currentPage} onNavigate={handleNavigate} />
+          )}
         <main className="flex-grow overflow-x-hidden w-full">
           {renderPage()}
         </main>
-        {currentPage !== 'admin' && 
-         currentPage !== 'admin-setup' && 
-         currentPage !== '404' &&
-         !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
-          <Footer onNavigate={handleNavigate} />
-        )}
+        {currentPage !== 'admin' &&
+          currentPage !== 'admin-setup' &&
+          currentPage !== '404' &&
+          !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
+            <Footer onNavigate={handleNavigate} />
+          )}
       </div>
       <CookieConsent />
     </>

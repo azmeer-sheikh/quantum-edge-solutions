@@ -8,7 +8,7 @@ export function AnimatedHeroMetrics() {
   const metrics = [
     { 
       icon: <TrendingUp className="w-8 h-8" />, 
-      value: '+342%', 
+      value: '+150%', 
       label: 'ROI Increase',
       color: '#75FF00'
     },
@@ -20,7 +20,7 @@ export function AnimatedHeroMetrics() {
     },
     { 
       icon: <Target className="w-8 h-8" />, 
-      value: '99.9%', 
+      value: '95%', 
       label: 'Accuracy',
       color: '#75FF00'
     },
