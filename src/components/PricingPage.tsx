@@ -108,10 +108,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { label: 'Happy Clients', value: 500, suffix: '+' },
-  { label: 'Projects Completed', value: 1200, suffix: '+' },
-  { label: 'Average ROI', value: 285, suffix: '%' },
-  { label: 'Team Members', value: 45, suffix: '+' }
+  { label: 'Happy Clients', value: 150, suffix: '+' },
+  { label: 'Projects Completed', value: 150, suffix: '+' },
+  { label: 'Average ROI', value: 150, suffix: '%' },
+  { label: 'Team Members', value: 50, suffix: '+' }
 ];
 
 const faqs = [

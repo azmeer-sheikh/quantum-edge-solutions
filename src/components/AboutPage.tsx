@@ -100,7 +100,7 @@ export function AboutPage() {
                 We built a solution combining advanced AI, full-stack development expertise, and deep marketing intelligence to automate and optimize every aspect of digital growth.
               </p>
               <p className="text-[#C2C2CC] text-lg">
-                Today, we power marketing operations for over 500 enterprise clients, processing billions of data points monthly to drive measurable business outcomes.
+                Today, we power marketing operations for over 150+ enterprise clients, processing billions of data points monthly to drive measurable business outcomes.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
