@@ -104,9 +104,8 @@ export function BlogArticlePage({ slug, onNavigate }: BlogArticlePageProps) {
                             if (!prev && !next) return null;
                             return (
                                 <div className="pt-8 border-t border-[#00D0FF]/10">
-                                    <div className={`grid gap-4 ${
-                                        prev && next ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2'
-                                    }`}>
+                                    <div className={`grid gap-4 ${prev && next ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2'
+                                        }`}>
                                         {/* Previous */}
                                         {prev ? (
                                             <button
