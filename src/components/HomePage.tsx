@@ -79,7 +79,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       icon: <Server className="w-10 h-10" />,
       title: 'SaaS Solutions',
       description: 'Custom SaaS platforms built for scalability and performance.',
-      metrics: ['99.9% Uptime', '10x ROI'],
+      metrics: ['90% Uptime', '2x ROI'],
     },
   ];
 
@@ -91,8 +91,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
   ];
 
   const technologies = [
-    'React', 'Node.js', 'Python', 'TensorFlow', 'AWS', 'Docker',
-    'Kubernetes', 'PostgreSQL', 'Redis', 'GraphQL', 'WebSocket', 'AI/ML'
+    'React.js', 'Node.js', 'Python', 'TensorFlow', 'AWS', 'Docker',
+    'Kubernetes', 'PostgreSQL', 'Redis', 'GraphQL', 'WebSocket', 'Next.js', 'WordPress', 'Shopify'
   ];
 
   return (

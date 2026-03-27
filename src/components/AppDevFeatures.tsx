@@ -171,7 +171,7 @@ export function AppDevFeatures() {
             {[
               { value: '50+', label: 'Apps Launched' },
               { value: '4.8★', label: 'Average Rating' },
-              { value: '99.9%', label: 'Uptime SLA' },
+              { value: '90%', label: 'Uptime SLA' },
             ].map((metric, index) => (
               <motion.div
                 key={index}
@@ -208,19 +208,19 @@ export function AppDevFeatures() {
             {[
               {
                 review:
-                  "Honestly wasn't sure what to expect going in — we're a small restaurant group, not a tech company. But the team walked us through everything step by step. The ordering app they built handles our three locations without any issues, and our staff picked it up faster than I thought they would. Would recommend to anyone looking to build something custom.",
+                  "Quantum Edge Solution helped us scale our SaaS product visibility across search and AI platforms. Within 3 months, we saw a significant increase in qualified leads and demo bookings. Their understanding of SaaS funnels is impressive.",
                 name: 'Marcus Delgado',
                 location: 'Austin, TX',
               },
               {
                 review:
-                  "We came to them with a rough idea for a client booking and workout tracking app. What they delivered was better than I had imagined — clean, fast, and actually intuitive to use. My clients constantly comment on how polished it feels. The whole process took about three months from concept to launch and they kept us in the loop throughout.",
+                  "We struggled with conversions before working with Quantum Edge. Their AI SEO and content strategy completely changed our growth trajectory. Now our product ranks and converts consistently",
                 name: 'Priya Nair',
                 location: 'Chicago, IL',
               },
               {
                 review:
-                  "We'd tried two other dev shops before and both times ended up with something half-finished. This team was different — they actually understood what we needed for field service management and built it right the first time. Our technicians use the app daily for job assignments and parts tracking. It's made a real difference in how we operate.",
+                  "Their team doesn’t just do SEO — they understand SaaS metrics like MRR, CAC, and user intent. That’s what makes them different from other agencies.",
                 name: 'Derek Weston',
                 location: 'Phoenix, AZ',
               },

@@ -128,7 +128,7 @@ export function AboutPage() {
               <Card className="bg-[#1A1A22] border-[#00D0FF]/30">
                 <CardContent className="pt-6 text-center">
                   <Award className="w-8 h-8 text-[#00D0FF] mx-auto mb-3" />
-                  <div className="text-[#75FF00] font-mono text-3xl mb-2">99.9%</div>
+                  <div className="text-[#75FF00] font-mono text-3xl mb-2">90%</div>
                   <div className="text-[#C2C2CC] text-sm">Uptime SLA</div>
                 </CardContent>
               </Card>

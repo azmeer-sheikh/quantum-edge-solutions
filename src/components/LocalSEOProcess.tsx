@@ -7,29 +7,29 @@ export function LocalSEOProcess() {
       number: '01',
       icon: <Search className="w-8 h-8" />,
       title: 'Audit & Analysis',
-      description: 'Comprehensive audit of your current local presence, citations, and competitors',
-      deliverables: ['NAP Audit', 'Citation Analysis', 'Competitor Research']
+      description: 'Thorough evaluation of your current local presence and competitors to uncover opportunities.',
+      deliverables: ['NAP Audit', 'Citation Analysis', 'Competitor Research & Insights']
     },
     {
       number: '02',
       icon: <MapPin className="w-8 h-8" />,
       title: 'GMB Optimization',
-      description: 'Complete Google My Business setup, verification, and optimization',
-      deliverables: ['Profile Setup', 'Category Selection', 'Review Strategy']
+      description: 'Complete Google Business Profile setup, verification, and optimization to boost local visibility.',
+      deliverables: ['Profile Setup & Verification', 'Accurate Category Selection', 'Review Strategy & Management']
     },
     {
       number: '03',
       icon: <Target className="w-8 h-8" />,
       title: 'Local Citations',
-      description: 'Build and optimize citations across top local directories',
-      deliverables: ['Directory Listings', 'NAP Consistency', 'Schema Markup']
+      description: 'Build authoritative citations across top local directories for stronger local SEO.',
+      deliverables: ['Directory Listings & Submission', 'NAP Consistency Checks', 'Local Schema Markup']
     },
     {
       number: '04',
       icon: <BarChart className="w-8 h-8" />,
       title: 'Track & Optimize',
-      description: 'Continuous monitoring, reporting, and optimization for sustained growth',
-      deliverables: ['Ranking Reports', 'Performance Metrics', 'Monthly Updates']
+      description: 'Continuous monitoring, reporting, and fine-tuning to sustain growth and maximize ROI.',
+      deliverables: ['Local Ranking Reports', 'Performance Metrics & Insights', 'Monthly Optimization Updates']
     },
   ];
 

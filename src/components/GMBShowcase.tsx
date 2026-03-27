@@ -19,19 +19,19 @@ export function GMBShowcase() {
       icon: <Camera className="w-6 h-6" />,
       title: 'Visual Optimization',
       description: 'Professional photos and virtual tours',
-      stat: '+156% Engagement'
+      stat: '+80% Engagement'
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: 'GMB Posts & Updates',
       description: 'Regular content updates to boost visibility',
-      stat: 'Weekly Updates'
+      stat: 'Three in a Week'
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: 'Hours & Attributes',
       description: 'Accurate business information optimization',
-      stat: '100% Accuracy'
+      stat: '90% Accuracy'
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
@@ -99,17 +99,17 @@ export function GMBShowcase() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <Phone className="w-8 h-8 text-[#00D0FF] mx-auto mb-3" />
-              <div className="text-[#75FF00] font-mono text-3xl mb-2">+245%</div>
+              <div className="text-[#75FF00] font-mono text-3xl mb-2">+60%</div>
               <div className="text-[#C2C2CC] text-sm">Phone Calls</div>
             </div>
             <div>
               <MapPin className="w-8 h-8 text-[#75FF00] mx-auto mb-3" />
-              <div className="text-[#00D0FF] font-mono text-3xl mb-2">+189%</div>
+              <div className="text-[#00D0FF] font-mono text-3xl mb-2">+80%</div>
               <div className="text-[#C2C2CC] text-sm">Direction Requests</div>
             </div>
             <div>
               <Users className="w-8 h-8 text-[#00D0FF] mx-auto mb-3" />
-              <div className="text-[#75FF00] font-mono text-3xl mb-2">+312%</div>
+              <div className="text-[#75FF00] font-mono text-3xl mb-2">+85%</div>
               <div className="text-[#C2C2CC] text-sm">Profile Views</div>
             </div>
             <div>

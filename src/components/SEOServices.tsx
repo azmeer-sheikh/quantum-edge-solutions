@@ -28,10 +28,10 @@ export function SEOServices() {
   ];
 
   const seoMetrics = [
-    { value: '+287%', label: 'Organic Traffic Growth', icon: <TrendingUp className="w-5 h-5" /> },
+    { value: '+70%', label: 'Organic Traffic Growth', icon: <TrendingUp className="w-5 h-5" /> },
     { value: '1st Page', label: 'Ranking Guarantee', icon: <Target className="w-5 h-5" /> },
     { value: '4.8★', label: 'Avg GMB Rating', icon: <Star className="w-5 h-5" /> },
-    { value: '3x', label: 'Local Visibility Increase', icon: <MapPin className="w-5 h-5" /> },
+    { value: '2x', label: 'Local Visibility Increase', icon: <MapPin className="w-5 h-5" /> },
   ];
 
   const localSEOFeatures = [
@@ -57,7 +57,7 @@ export function SEOServices() {
             <span className="text-[#75FF00] text-sm font-mono">SEO • LOCAL SEO • GMB</span>
           </div>
           <h2 className="text-white mb-4 text-4xl md:text-5xl">
-            Dominate <span className="text-[#75FF00]">Local Search Results</span>
+            The <span className="text-[#75FF00]">SEO Edge</span> Your Local Business Needs
           </h2>
           <p className="text-[#C2C2CC] text-xl max-w-3xl mx-auto">
             Advanced SEO strategies powered by data intelligence to increase visibility, drive qualified traffic, and dominate your local market

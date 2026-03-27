@@ -48,9 +48,9 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
   ];
 
   const results = [
-    { metric: '+287%', label: 'Organic Traffic Growth' },
+    { metric: '+70%', label: 'Organic Traffic Growth' },
     { metric: '1st Page', label: 'Google Rankings' },
-    { metric: '+150%', label: 'Lead Generation' },
+    { metric: '+80%', label: 'Lead Generation' },
     { metric: '45%', label: 'Lower Cost Per Lead' },
   ];
 

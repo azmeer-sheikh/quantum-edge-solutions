@@ -65,7 +65,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         { name: 'Performance Monitoring', icon: <Cpu size={16} /> },
       ],
       metrics: [
-        { label: 'Uptime SLA', value: '99.9%' },
+        { label: 'Uptime SLA', value: '90%' },
         { label: 'Deploy Speed', value: '10x Faster' },
         { label: 'Scalability', value: 'Unlimited' },
       ],
