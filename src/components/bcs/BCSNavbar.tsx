@@ -46,55 +46,54 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-lg py-2' 
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white shadow-lg py-2'
           : 'bg-white/95 backdrop-blur-sm py-3 sm:py-4'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo - Clickable */}
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <img 
-              src={bcsLogo} 
-              alt="Business Communication Solutions" 
+            <img
+              src={bcsLogo}
+              alt="Business Communication Solutions"
               className="h-[120px] w-[120px] object-contain"
             />
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <button 
+            <button
               onClick={() => scrollToSection('services')}
               className="text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Services
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('benefits')}
               className="text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Why Choose Us
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('portfolio')}
               className="text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Portfolio
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('testimonials')}
               className="text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Reviews
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection('platform')}
               className="text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               About
@@ -102,14 +101,14 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
 
             {/* Service Areas Dropdown */}
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className="flex items-center gap-1 text-[#0B4F6C] hover:text-[#01BAEF] transition-colors text-sm xl:text-base whitespace-nowrap"
               >
                 <span>Areas</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isServicesOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50">
                   {cities.map((city) => (
@@ -119,9 +118,8 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
                         setIsServicesOpen(false);
                         onNavigate(`bussiness-communication-solution/${city.slug}`);
                       }}
-                      className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 transition-colors text-sm ${
-                        city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
-                      }`}
+                      className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 transition-colors text-sm ${city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
+                        }`}
                     >
                       {city.name}
                     </button>
@@ -133,14 +131,14 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
 
           {/* Contact Info */}
           <div className="hidden xl:flex items-center gap-3 2xl:gap-4">
-            <a 
+            <a
               href="tel:+15122571433"
               className="flex items-center gap-2 text-[#0B4F6C] hover:text-[#01BAEF] transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(512) 257-1433</span>
             </a>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className="px-4 2xl:px-6 py-2 2xl:py-2.5 bg-[#01BAEF] text-white rounded-lg hover:bg-[#0B4F6C] transition-all shadow-md hover:shadow-lg text-sm whitespace-nowrap"
             >
@@ -163,32 +161,32 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="px-4 py-4 space-y-2">
-            <button 
+            <button
               onClick={() => scrollToSection('services')}
               className="block w-full text-left px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
             >
               Services
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('benefits')}
               className="block w-full text-left px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
             >
               Why Choose Us
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('portfolio')}
               className="block w-full text-left px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
             >
               Portfolio
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('testimonials')}
               className="block w-full text-left px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
             >
               Reviews
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection('platform')}
               className="block w-full text-left px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
             >
               About
@@ -204,9 +202,8 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
                     setIsMobileMenuOpen(false);
                     onNavigate(`bussiness-communication-solution/${city.slug}`);
                   }}
-                  className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 rounded-lg transition-colors ${
-                    city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
-                  }`}
+                  className={`block w-full text-left px-4 py-2 hover:bg-[#01BAEF]/10 rounded-lg transition-colors ${city.slug === citySlug ? 'bg-[#01BAEF]/5 text-[#01BAEF]' : 'text-[#0B4F6C]'
+                    }`}
                 >
                   {city.name}
                 </button>
@@ -215,14 +212,14 @@ export function BCSNavbar({ cityName, citySlug, onNavigate }: BCSNavbarProps) {
 
             {/* Mobile Contact */}
             <div className="pt-3 border-t border-gray-200 space-y-2">
-              <a 
+              <a
                 href="tel:+15122571433"
                 className="flex items-center gap-2 px-4 py-3 text-[#0B4F6C] hover:bg-[#01BAEF]/10 rounded-lg transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span>(512) 257-1433</span>
               </a>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="w-full px-6 py-3 bg-[#01BAEF] text-white rounded-lg hover:bg-[#0B4F6C] transition-all shadow-md"
               >

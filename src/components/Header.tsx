@@ -21,13 +21,13 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   ];
 
   const platformItems = [
-    { name: 'SaaS Platform', path: 'about', icon: <Server className="w-5 h-5" />, description: 'Our software solutions' },
+    { name: 'SaaS Platform', path: 'platform', icon: <Server className="w-5 h-5" />, description: 'Our software solutions' },
     { name: 'Automation Tools', path: 'services', icon: <Zap className="w-5 h-5" />, description: 'Marketing automation' },
   ];
 
   const navItems = [
     { name: 'Home', path: 'home' },
-    { name: 'Platform', path: 'about', hasDropdown: false },
+    { name: 'Platform', path: 'platform', hasDropdown: false },
     { name: 'Services', path: 'services', hasDropdown: true },
     { name: 'Pricing', path: 'pricing' },
     { name: 'Case Studies', path: 'portfolio' },

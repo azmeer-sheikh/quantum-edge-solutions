@@ -41,7 +41,7 @@ export default function App() {
       '/web-design': 'web-design',
       '/marketing-services': 'marketing-services',
       '/pricing': 'pricing',
-      '/about': 'about',
+      '/about': 'platform',
       '/portfolio': 'portfolio',
       '/blog': 'blog',
       '/contact': 'contact',
@@ -181,7 +181,7 @@ export default function App() {
         return <MarketingServicesPage onNavigate={handleNavigate} />;
       case 'pricing':
         return <PricingPage />;
-      case 'about':
+      case 'platform':
         return <AboutPage />;
       case 'portfolio':
         return <PortfolioPage onNavigate={handleNavigate} />;
@@ -203,7 +203,7 @@ export default function App() {
         return <NotFoundPage onNavigate={handleNavigate} />;
       default:
         // Check if it's an unknown route
-        const validPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'about', 'portfolio', 'blog', 'contact', 'admin', 'admin-setup', 'privacy-policy', 'terms-of-service', 'refund-policy'];
+        const validPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'platform', 'portfolio', 'blog', 'contact', 'admin', 'admin-setup', 'privacy-policy', 'terms-of-service', 'refund-policy'];
         if (currentPage && !validPages.includes(currentPage)) {
           return <NotFoundPage onNavigate={handleNavigate} />;
         }
@@ -211,7 +211,7 @@ export default function App() {
     }
   };
 
-  const validMainPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'pricing', 'about', 'portfolio', 'blog', 'contact', 'privacy-policy', 'terms-of-service', 'refund-policy'];
+  const validMainPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'pricing', 'platform', 'portfolio', 'blog', 'contact', 'privacy-policy', 'terms-of-service', 'refund-policy'];
 
   return (
     <>

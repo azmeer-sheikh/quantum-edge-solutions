@@ -54,7 +54,7 @@ export function NotFoundPage({ onNavigate }: NotFoundPageProps) {
             <Home className="w-5 h-5" />
             Back to Home
           </Button>
-          
+
           <Button
             onClick={() => window.history.back()}
             variant="outline"
@@ -77,7 +77,7 @@ export function NotFoundPage({ onNavigate }: NotFoundPageProps) {
             </button>
             <span className="text-[#2A2A33]">•</span>
             <button
-              onClick={() => onNavigate('about')}
+              onClick={() => onNavigate('platform')}
               className="text-[#00D0FF] hover:text-[#75FF00] transition-colors text-sm"
             >
               Solutions

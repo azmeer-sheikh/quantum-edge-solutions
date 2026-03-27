@@ -74,7 +74,7 @@ export function AboutPage() {
         <CircuitBackground />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="inline-block mb-6 px-4 py-2 bg-[#00D0FF]/10 border border-[#00D0FF]/30 rounded-md">
-            <span className="text-[#00D0FF] text-sm font-mono">ABOUT US</span>
+            <span className="text-[#00D0FF] text-sm font-mono">Platform</span>
           </div>
           <h1 className="text-white mb-6 text-5xl">Enterprise Solutions</h1>
           <p className="text-[#C2C2CC] text-xl max-w-3xl mx-auto">
