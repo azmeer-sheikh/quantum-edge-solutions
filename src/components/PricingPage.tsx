@@ -285,7 +285,7 @@ export function PricingPage() {
             </div>
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#75FF00] transition-colors">
               <Users className="w-5 h-5 sm:w-6 sm:h-6 text-[#75FF00] flex-shrink-0" />
-              <span className="font-medium">500+ Clients</span>
+              <span className="font-medium">150+ Clients</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#75FF00] transition-colors">
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-[#75FF00] flex-shrink-0" />

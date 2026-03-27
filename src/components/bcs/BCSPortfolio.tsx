@@ -125,7 +125,7 @@ export function BCSPortfolio({ cityName }: BCSPortfolioProps) {
         {/* Bottom Stats */}
         <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           <div className="text-center p-4 sm:p-6 bg-white border border-gray-200 rounded-xl">
-            <div className="text-3xl sm:text-4xl text-[#01BAEF] mb-1 sm:mb-2">500+</div>
+            <div className="text-3xl sm:text-4xl text-[#01BAEF] mb-1 sm:mb-2">150+</div>
             <div className="text-xs sm:text-sm text-[#5A6C7D]">Projects Completed</div>
           </div>
           <div className="text-center p-4 sm:p-6 bg-white border border-gray-200 rounded-xl">

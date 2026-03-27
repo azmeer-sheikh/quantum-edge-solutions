@@ -144,7 +144,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-12 md:gap-16 lg:gap-24 text-center">
             <div>
-              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">50+</div>
+              <div className="text-[#75FF00] font-mono text-4xl mb-2 metric-glow">150+</div>
               <div className="text-[#C2C2CC] text-sm">Projects Completed</div>
             </div>
             {/* <div>

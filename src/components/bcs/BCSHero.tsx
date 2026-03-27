@@ -101,7 +101,7 @@ export function BCSHero({ headline, subheading, cityName }: BCSHeroProps) {
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-2">500+</div>
+              <div className="text-4xl mb-2">150+</div>
               <div className="text-sm text-white/80">Projects Completed</div>
             </div>
             
