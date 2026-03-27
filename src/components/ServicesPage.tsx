@@ -45,9 +45,9 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         { name: 'Task Scheduling', icon: <Clock size={16} /> },
       ],
       metrics: [
-        { label: 'Time Saved', value: '20hrs/wk' },
+        { label: 'Time Saved', value: '10hrs/wk' },
         { label: 'Process Efficiency', value: '+85%' },
-        { label: 'Error Reduction', value: '-92%' },
+        { label: 'Error Reduction', value: '92%' },
       ],
     },
     {

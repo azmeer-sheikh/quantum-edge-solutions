@@ -73,7 +73,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       icon: <Zap className="w-10 h-10" />,
       title: 'Marketing Automation',
       description: 'Intelligent automation systems that optimize workflows and maximize efficiency.',
-      metrics: ['20hrs Saved/Week', '85% Time Reduction'],
+      metrics: ['10hrs Saved/Week', '85% Time Reduction'],
     },
     {
       icon: <Server className="w-10 h-10" />,
