@@ -23,7 +23,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
       challenge: 'Legacy CRM system unable to scale with 10x growth',
       solution: 'Built microservices-based SaaS platform with real-time analytics',
       results: [
-        { metric: 'System Performance', value: '+340%', icon: <TrendingUp size={16} /> },
+        { metric: 'System Performance', value: '+85%', icon: <TrendingUp size={16} /> },
         { metric: 'Cost Reduction', value: '45%', icon: <DollarSign size={16} /> },
         { metric: 'Deploy Time', value: '3x Faster', icon: <Clock size={16} /> },
       ],

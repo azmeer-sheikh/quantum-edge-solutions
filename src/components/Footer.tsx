@@ -56,7 +56,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("about")}
+                  onClick={() => onNavigate("platform")}
                   className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
                 >
                   Platform
@@ -84,6 +84,14 @@ export function Footer({ onNavigate }: FooterProps) {
                   className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
                 >
                   Insights
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="text-[#C2C2CC] hover:text-[#00D0FF] transition-colors"
+                >
+                  Contact
                 </button>
               </li>
             </ul>
@@ -127,7 +135,7 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("about")}
+                  onClick={() => onNavigate("platform")}
                   className="text-[#C2C2CC]/80 hover:text-[#00D0FF] transition-colors"
                 >
                   SaaS Platform

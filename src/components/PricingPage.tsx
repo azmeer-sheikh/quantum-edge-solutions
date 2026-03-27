@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { Check, X, MessageCircle, Award, Users, TrendingUp, Star, HelpCircle, ArrowRight } from 'lucide-react';
+import { Check, X, MessageCircle, Users, TrendingUp, Star, HelpCircle, ArrowRight } from 'lucide-react';
+import { SiGoogle, SiMeta, SiHubspot } from 'react-icons/si';
 import { useInView } from 'motion/react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
@@ -272,15 +273,15 @@ export function PricingPage() {
         <FadeInSection>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-16 lg:mb-24 mt-8 lg:mt-20 pt-8 lg:pt-16 pb-12 lg:pb-20 border-t border-b border-[#2A2A33]/50 px-4">
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#00D0FF] transition-colors">
-              <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D0FF] flex-shrink-0" />
+              <SiGoogle className="w-5 h-5 sm:w-6 sm:h-6 text-[#4285F4] flex-shrink-0" aria-hidden="true" />
               <span className="font-medium">Google Partner</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#00D0FF] transition-colors">
-              <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D0FF] flex-shrink-0" />
+              <SiMeta className="w-5 h-5 sm:w-6 sm:h-6 text-[#0081FB] flex-shrink-0" aria-hidden="true" />
               <span className="font-medium">Meta Business Partner</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#00D0FF] transition-colors">
-              <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D0FF] flex-shrink-0" />
+              <SiHubspot className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF7A59] flex-shrink-0" aria-hidden="true" />
               <span className="font-medium">HubSpot Certified</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-3 text-[#C2C2CC] text-xs sm:text-sm px-2 sm:px-3 hover:text-[#75FF00] transition-colors">
@@ -520,7 +521,7 @@ export function PricingPage() {
         </FadeInSection>
 
         {/* Testimonials Section */}
-        <FadeInSection>
+        {/* <FadeInSection>
           <div className="mt-16 lg:mt-24 mb-16 lg:mb-24 pt-8 lg:pt-16 px-2 sm:px-4">
             <div className="text-center mb-12 lg:mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-white">
@@ -556,7 +557,7 @@ export function PricingPage() {
               ))}
             </div>
           </div>
-        </FadeInSection>
+        </FadeInSection> */}
 
         {/* FAQ Section */}
         <FadeInSection>
