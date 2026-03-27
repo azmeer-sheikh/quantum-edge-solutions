@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { CircuitBackground } from './CircuitBackground';
 import { LogoDecorative } from './Logo';
-import { blogArticles, featuredBlogArticle } from '../data/blogArticles';
+import { blogArticles, featuredBlogArticle, SERVICE_CATEGORIES } from '../data/blogArticles';
 
 interface BlogPageProps {
   onNavigate: (page: string) => void;
@@ -15,7 +15,7 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
 
   const blogPosts = blogArticles.filter((post) => !post.featured);
-  const categories = ['All Posts', ...new Set(blogArticles.map((post) => post.category))];
+  const categories = ['All Posts', ...SERVICE_CATEGORIES];
 
   const getIcon = (icon: 'code' | 'trending' | 'zap') => {
     switch (icon) {
@@ -38,9 +38,9 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
           <div className="inline-block mb-6 px-4 py-2 bg-[#00D0FF]/10 border border-[#00D0FF]/30 rounded-md">
             <span className="text-[#00D0FF] text-sm font-mono">INSIGHTS & RESEARCH</span>
           </div>
-          <h1 className="text-white mb-6 text-5xl">Technical Insights</h1>
+          <h1 className="text-white mb-6 text-5xl">Expert Insights</h1>
           <p className="text-[#C2C2CC] text-xl max-w-3xl mx-auto">
-            Deep dives into engineering, data science, and digital marketing innovation
+            Guides, strategies, and deep dives across SEO, web design, digital marketing, and more
           </p>
         </div>
       </section>
@@ -222,33 +222,21 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-1 bg-[#00D0FF]/10 border border-[#00D0FF]/20 rounded-md mb-4">
-              <span className="text-[#00D0FF] text-xs font-mono">EXPLORE TOPICS</span>
+              <span className="text-[#00D0FF] text-xs font-mono">OUR SERVICES</span>
             </div>
             <h2 className="text-white text-3xl md:text-4xl font-bold">
-              Popular Topics
+              Browse by Service
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-            {[
-              'Machine Learning',
-              'Kubernetes',
-              'React',
-              'Data Engineering',
-              'Marketing Automation',
-              'API Design',
-              'Cloud Architecture',
-              'Performance Optimization',
-              'Microservices',
-              'Real-time Analytics',
-              'DevOps',
-              'SaaS Development',
-            ].map((topic) => (
-              <div
+            {SERVICE_CATEGORIES.map((topic) => (
+              <button
                 key={topic}
+                onClick={() => setSelectedCategory(topic)}
                 className="px-4 py-2 bg-[#1A1A22] border border-[#00D0FF]/10 rounded-full hover:border-[#00D0FF]/30 hover:bg-[#00D0FF]/5 transition-all cursor-pointer"
               >
                 <span className="text-[#C2C2CC] font-mono text-xs">{topic}</span>
-              </div>
+              </button>
             ))}
           </div>
         </div>

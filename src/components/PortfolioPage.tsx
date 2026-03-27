@@ -6,13 +6,14 @@ import { Badge } from './ui/badge';
 import { CircuitBackground } from './CircuitBackground';
 import { LogoDecorative } from './Logo';
 import { portfolioCaseStudies, type PortfolioMetric } from '../data/portfolioCaseStudies';
+import { SERVICE_CATEGORIES } from '../data/blogArticles';
 
 interface PortfolioPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const getMetricIcon = (icon: PortfolioMetric['icon']) => {
     switch (icon) {
@@ -30,9 +31,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
 
   const categories = [
     { id: 'all', label: 'All Cases' },
-    { id: 'saas', label: 'SaaS' },
-    { id: 'automation', label: 'Automation' },
-    { id: 'marketing', label: 'Marketing' },
+    ...SERVICE_CATEGORIES.map((s) => ({ id: s, label: s })),
   ];
 
   const filteredCases = selectedCategory === 'all'
@@ -48,9 +47,9 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           <div className="inline-block mb-6 px-4 py-2 bg-[#00D0FF]/10 border border-[#00D0FF]/30 rounded-md">
             <span className="text-[#00D0FF] text-sm font-mono">CASE STUDIES</span>
           </div>
-          <h1 className="text-white mb-6 text-5xl font-bold">Proven Results</h1>
+          <h1 className="text-white mb-6 text-5xl font-bold">Client Results</h1>
           <p className="text-[#C2C2CC] text-xl max-w-3xl mx-auto">
-            Real enterprise solutions delivering measurable impact across industries
+            Real projects across SEO, web design, digital marketing, and development — with measurable outcomes
           </p>
         </div>
       </section>
