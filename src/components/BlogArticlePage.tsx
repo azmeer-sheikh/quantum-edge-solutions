@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Card, CardContent } from './ui/card';
@@ -95,14 +95,61 @@ export function BlogArticlePage({ slug, onNavigate }: BlogArticlePageProps) {
                             ))}
                         </article>
 
-                        <div className="pt-6 border-t border-[#00D0FF]/10">
-                            <Button
-                                onClick={() => onNavigate('blog')}
-                                className="bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 font-medium"
-                            >
-                                Read More Articles
-                            </Button>
-                        </div>
+                        {/* Prev / Next Article Navigation */}
+                        {(() => {
+                            const sameCat = blogArticles.filter(a => a.category === article.category);
+                            const idx = sameCat.findIndex(a => a.slug === article.slug);
+                            const prev = idx > 0 ? sameCat[idx - 1] : null;
+                            const next = idx < sameCat.length - 1 ? sameCat[idx + 1] : null;
+                            if (!prev && !next) return null;
+                            return (
+                                <div className="pt-8 border-t border-[#00D0FF]/10">
+                                    <div className={`grid gap-4 ${
+                                        prev && next ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2'
+                                    }`}>
+                                        {/* Previous */}
+                                        {prev ? (
+                                            <button
+                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`blog/${prev.slug}`); }}
+                                                className="group flex items-center gap-4 bg-[#1A1A22] border border-[#00D0FF]/20 rounded-xl p-5 text-left hover:border-[#00D0FF]/60 hover:bg-[#00D0FF]/5 transition-all duration-300 cursor-pointer w-full"
+                                            >
+                                                <ArrowLeft size={22} className="text-[#00D0FF] shrink-0 group-hover:-translate-x-1 transition-transform duration-300" />
+                                                <img
+                                                    src={prev.image}
+                                                    alt={prev.title}
+                                                    className="w-16 h-16 object-cover rounded-lg shrink-0 border border-[#00D0FF]/10"
+                                                />
+                                                <div className="min-w-0">
+                                                    <span className="block text-[#00D0FF] text-xs font-mono uppercase tracking-wider mb-1">Previous</span>
+                                                    <span className="block text-white text-sm font-semibold leading-snug group-hover:text-[#00D0FF] transition-colors line-clamp-2">{prev.title}</span>
+                                                    <span className="block text-[#C2C2CC] text-xs mt-1">{prev.category}</span>
+                                                </div>
+                                            </button>
+                                        ) : <div />}
+
+                                        {/* Next */}
+                                        {next ? (
+                                            <button
+                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`blog/${next.slug}`); }}
+                                                className="group flex items-center gap-4 bg-[#1A1A22] border border-[#75FF00]/20 rounded-xl p-5 text-right justify-end hover:border-[#75FF00]/60 hover:bg-[#75FF00]/5 transition-all duration-300 cursor-pointer w-full"
+                                            >
+                                                <div className="min-w-0">
+                                                    <span className="block text-[#75FF00] text-xs font-mono uppercase tracking-wider mb-1 text-right">Next</span>
+                                                    <span className="block text-white text-sm font-semibold leading-snug group-hover:text-[#75FF00] transition-colors line-clamp-2 text-right">{next.title}</span>
+                                                    <span className="block text-[#C2C2CC] text-xs mt-1 text-right">{next.category}</span>
+                                                </div>
+                                                <img
+                                                    src={next.image}
+                                                    alt={next.title}
+                                                    className="w-16 h-16 object-cover rounded-lg shrink-0 border border-[#75FF00]/10"
+                                                />
+                                                <ArrowRight size={22} className="text-[#75FF00] shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                                            </button>
+                                        ) : <div />}
+                                    </div>
+                                </div>
+                            );
+                        })()}
                     </div>
                 </div>
             </section>
