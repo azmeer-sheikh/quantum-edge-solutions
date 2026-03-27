@@ -41,7 +41,7 @@ export default function App() {
       '/web-design': 'web-design',
       '/marketing-services': 'marketing-services',
       '/pricing': 'pricing',
-      '/about': 'platform',
+      '/platform': 'platform',
       '/portfolio': 'portfolio',
       '/blog': 'blog',
       '/contact': 'contact',
