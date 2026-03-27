@@ -11,7 +11,9 @@ import { TermsOfServicePage } from './components/TermsOfServicePage';
 import { RefundPolicyPage } from './components/RefundPolicyPage';
 import { AboutPage } from './components/AboutPage';
 import { PortfolioPage } from './components/PortfolioPage';
+import { PortfolioCaseStudyPage } from './components/PortfolioCaseStudyPage';
 import { BlogPage } from './components/BlogPage';
+import { BlogArticlePage } from './components/BlogArticlePage';
 import { ContactPage } from './components/ContactPage';
 import { PricingPage } from './components/PricingPage';
 import { AdminPage } from './components/AdminPage';
@@ -61,6 +63,22 @@ export default function App() {
         setCurrentPage('bussiness-communication-solution/austin');
       }
     }
+    else if (path.startsWith('/blog/')) {
+      const articleSlug = path.replace('/blog/', '').trim();
+      if (articleSlug) {
+        setCurrentPage(`blog/${articleSlug}`);
+      } else {
+        setCurrentPage('blog');
+      }
+    }
+    else if (path.startsWith('/portfolio/')) {
+      const caseStudySlug = path.replace('/portfolio/', '').trim();
+      if (caseStudySlug) {
+        setCurrentPage(`portfolio/${caseStudySlug}`);
+      } else {
+        setCurrentPage('portfolio');
+      }
+    }
     // Admin routes still use hash
     else if (hash === 'admin' || hash === 'admin-setup') {
       setCurrentPage(hash);
@@ -102,6 +120,12 @@ export default function App() {
       if (newPath.startsWith('/bussiness-communication-solution/')) {
         const citySlug = newPath.replace('/bussiness-communication-solution/', '');
         setCurrentPage(`bussiness-communication-solution/${citySlug || 'austin'}`);
+      } else if (newPath.startsWith('/blog/')) {
+        const articleSlug = newPath.replace('/blog/', '').trim();
+        setCurrentPage(articleSlug ? `blog/${articleSlug}` : 'blog');
+      } else if (newPath.startsWith('/portfolio/')) {
+        const caseStudySlug = newPath.replace('/portfolio/', '').trim();
+        setCurrentPage(caseStudySlug ? `portfolio/${caseStudySlug}` : 'portfolio');
       } else if (newHash === 'admin' || newHash === 'admin-setup') {
         setCurrentPage(newHash);
       } else if (pageMap[newPath]) {
@@ -186,7 +210,7 @@ export default function App() {
       case 'portfolio':
         return <PortfolioPage onNavigate={handleNavigate} />;
       case 'blog':
-        return <BlogPage />;
+        return <BlogPage onNavigate={handleNavigate} />;
       case 'contact':
         return <ContactPage />;
       case 'admin':
@@ -202,9 +226,17 @@ export default function App() {
       case '404':
         return <NotFoundPage onNavigate={handleNavigate} />;
       default:
+        if (currentPage.startsWith('blog/')) {
+          const articleSlug = currentPage.replace('blog/', '');
+          return <BlogArticlePage slug={articleSlug} onNavigate={handleNavigate} />;
+        }
+        if (currentPage.startsWith('portfolio/')) {
+          const caseStudySlug = currentPage.replace('portfolio/', '');
+          return <PortfolioCaseStudyPage slug={caseStudySlug} onNavigate={handleNavigate} />;
+        }
         // Check if it's an unknown route
         const validPages = ['home', 'services', 'seo-services', 'web-design', 'marketing-services', 'platform', 'portfolio', 'blog', 'contact', 'admin', 'admin-setup', 'privacy-policy', 'terms-of-service', 'refund-policy'];
-        if (currentPage && !validPages.includes(currentPage)) {
+        if (currentPage && !validPages.includes(currentPage) && !currentPage.startsWith('blog/') && !currentPage.startsWith('portfolio/')) {
           return <NotFoundPage onNavigate={handleNavigate} />;
         }
         return <HomePage onNavigate={handleNavigate} />;
@@ -221,8 +253,12 @@ export default function App() {
         {currentPage !== 'admin' &&
           currentPage !== 'admin-setup' &&
           currentPage !== '404' &&
-          !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
-            <Header currentPage={currentPage} onNavigate={handleNavigate} />
+          !currentPage.startsWith('bussiness-communication-solution/') &&
+          (validMainPages.includes(currentPage) || currentPage.startsWith('blog/') || currentPage.startsWith('portfolio/')) && (
+            <Header
+              currentPage={currentPage.startsWith('blog/') ? 'blog' : currentPage.startsWith('portfolio/') ? 'portfolio' : currentPage}
+              onNavigate={handleNavigate}
+            />
           )}
         <main className="flex-grow overflow-x-hidden w-full">
           {renderPage()}
@@ -230,7 +266,8 @@ export default function App() {
         {currentPage !== 'admin' &&
           currentPage !== 'admin-setup' &&
           currentPage !== '404' &&
-          !currentPage.startsWith('bussiness-communication-solution/') && validMainPages.includes(currentPage) && (
+          !currentPage.startsWith('bussiness-communication-solution/') &&
+          (validMainPages.includes(currentPage) || currentPage.startsWith('blog/') || currentPage.startsWith('portfolio/')) && (
             <Footer onNavigate={handleNavigate} />
           )}
       </div>

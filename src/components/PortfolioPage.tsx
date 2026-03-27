@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { CircuitBackground } from './CircuitBackground';
 import { LogoDecorative } from './Logo';
+import { portfolioCaseStudies, type PortfolioMetric } from '../data/portfolioCaseStudies';
 
 interface PortfolioPageProps {
   onNavigate: (page: string) => void;
@@ -13,104 +14,19 @@ interface PortfolioPageProps {
 export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const caseStudies = [
-    {
-      id: 1,
-      category: 'saas',
-      title: 'Enterprise CRM Platform Migration',
-      client: 'TechCorp Global',
-      industry: 'Technology',
-      challenge: 'Legacy CRM system unable to scale with 10x growth',
-      solution: 'Built microservices-based SaaS platform with real-time analytics',
-      results: [
-        { metric: 'System Performance', value: '+85%', icon: <TrendingUp size={16} /> },
-        { metric: 'Cost Reduction', value: '45%', icon: <DollarSign size={16} /> },
-        { metric: 'Deploy Time', value: '3x Faster', icon: <Clock size={16} /> },
-      ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      id: 2,
-      category: 'automation',
-      title: 'Marketing Automation Suite',
-      client: 'FinanceFlow Inc',
-      industry: 'Financial Services',
-      challenge: 'Manual lead nurturing consuming 40+ hours weekly',
-      solution: 'AI-powered automation with predictive lead scoring',
-      results: [
-        { metric: 'Time Saved', value: '35hrs/wk', icon: <Clock size={16} /> },
-        { metric: 'Conversion Rate', value: '+127%', icon: <TrendingUp size={16} /> },
-        { metric: 'Lead Quality', value: '+89%', icon: <Users size={16} /> },
-      ],
-      technologies: ['Python', 'TensorFlow', 'Redis', 'GraphQL', 'Kafka'],
-      image: 'https://images.pexels.com/photos/5473958/pexels-photo-5473958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      id: 3,
-      category: 'marketing',
-      title: 'Multi-Channel Attribution System',
-      client: 'RetailMax',
-      industry: 'E-commerce',
-      challenge: 'Unable to track customer journey across 12+ channels',
-      solution: 'Custom attribution platform with ML-powered insights',
-      results: [
-        { metric: 'ROI Visibility', value: '+420%', icon: <DollarSign size={16} /> },
-        { metric: 'Ad Spend Efficiency', value: '+156%', icon: <TrendingUp size={16} /> },
-        { metric: 'Revenue Growth', value: '+$2.4M', icon: <DollarSign size={16} /> },
-      ],
-      technologies: ['Python', 'BigQuery', 'React', 'D3.js', 'FastAPI'],
-      image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      id: 4,
-      category: 'saas',
-      title: 'Real-Time Analytics Dashboard',
-      client: 'DataDrive Analytics',
-      industry: 'SaaS',
-      challenge: 'Batch processing causing 24hr data delays',
-      solution: 'Real-time streaming analytics with sub-second latency',
-      results: [
-        { metric: 'Data Latency', value: '<100ms', icon: <Clock size={16} /> },
-        { metric: 'Query Performance', value: '+890%', icon: <TrendingUp size={16} /> },
-        { metric: 'User Adoption', value: '+215%', icon: <Users size={16} /> },
-      ],
-      technologies: ['Apache Kafka', 'ClickHouse', 'WebSocket', 'React', 'Grafana'],
-      image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      id: 5,
-      category: 'automation',
-      title: 'Enterprise Email Orchestration',
-      client: 'GlobalReach Marketing',
-      industry: 'Marketing Agency',
-      challenge: 'Managing 100K+ contacts across fragmented systems',
-      solution: 'Unified email automation with AI personalization',
-      results: [
-        { metric: 'Email Volume', value: '10M+/mo', icon: <TrendingUp size={16} /> },
-        { metric: 'Open Rate', value: '+68%', icon: <Users size={16} /> },
-        { metric: 'Deliverability', value: '99.4%', icon: <TrendingUp size={16} /> },
-      ],
-      technologies: ['SendGrid API', 'Redis', 'PostgreSQL', 'Python', 'Celery'],
-      image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      id: 6,
-      category: 'marketing',
-      title: 'Predictive Lead Scoring Model',
-      client: 'SaaSify Platform',
-      industry: 'B2B SaaS',
-      challenge: 'Sales team unable to prioritize 10K+ monthly leads',
-      solution: 'ML-based lead scoring with behavioral analysis',
-      results: [
-        { metric: 'Sales Efficiency', value: '+310%', icon: <TrendingUp size={16} /> },
-        { metric: 'Close Rate', value: '+145%', icon: <DollarSign size={16} /> },
-        { metric: 'Sales Cycle', value: '-40%', icon: <Clock size={16} /> },
-      ],
-      technologies: ['Python', 'scikit-learn', 'XGBoost', 'PostgreSQL', 'FastAPI'],
-      image: 'https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-  ];
+  const getMetricIcon = (icon: PortfolioMetric['icon']) => {
+    switch (icon) {
+      case 'dollar':
+        return <DollarSign size={16} />;
+      case 'clock':
+        return <Clock size={16} />;
+      case 'users':
+        return <Users size={16} />;
+      case 'trending':
+      default:
+        return <TrendingUp size={16} />;
+    }
+  };
 
   const categories = [
     { id: 'all', label: 'All Cases' },
@@ -120,8 +36,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
   ];
 
   const filteredCases = selectedCategory === 'all'
-    ? caseStudies
-    : caseStudies.filter(cs => cs.category === selectedCategory);
+    ? portfolioCaseStudies
+    : portfolioCaseStudies.filter((cs) => cs.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-[#14141A]">
@@ -190,7 +106,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCases.map((study) => (
               <Card
-                key={study.id}
+                key={study.slug}
                 className="bg-[#1A1A22] border-[#00D0FF]/20 hover:border-[#00D0FF] transition-all overflow-hidden group shadow-lg hover:shadow-2xl hover:glow-cyan"
               >
                 <div className="relative h-48 overflow-hidden">
@@ -226,7 +142,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex justify-between items-center">
                         <div className="flex items-center gap-2">
-                          <div className="text-[#00D0FF]">{result.icon}</div>
+                          <div className="text-[#00D0FF]">{getMetricIcon(result.icon)}</div>
                           <span className="text-[#C2C2CC] text-xs">{result.metric}</span>
                         </div>
                         <span className="text-[#75FF00] font-mono text-sm font-bold">{result.value}</span>
@@ -244,6 +160,15 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                       </span>
                     ))}
                   </div>
+
+                  <Button
+                    variant="ghost"
+                    onClick={() => onNavigate(`portfolio/${study.slug}`)}
+                    className="w-full text-[#00D0FF] hover:bg-[#00D0FF]/10 hover:text-white border border-[#00D0FF]/20 font-medium text-sm"
+                  >
+                    View Case Study
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}

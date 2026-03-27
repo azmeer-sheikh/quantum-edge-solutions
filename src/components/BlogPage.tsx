@@ -5,92 +5,29 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { CircuitBackground } from './CircuitBackground';
 import { LogoDecorative } from './Logo';
+import { blogArticles, featuredBlogArticle } from '../data/blogArticles';
 
-export function BlogPage() {
+interface BlogPageProps {
+  onNavigate: (page: string) => void;
+}
+
+export function BlogPage({ onNavigate }: BlogPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
 
-  const featuredPost = {
-    title: 'The Future of Marketing Automation: AI-Powered Optimization in 2025',
-    excerpt: 'How machine learning is revolutionizing marketing workflows and delivering unprecedented ROI at scale.',
-    author: 'Dr. Alex Chen',
-    date: 'October 25, 2025',
-    readTime: '8 min read',
-    category: 'AI & Automation',
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  const blogPosts = blogArticles.filter((post) => !post.featured);
+  const categories = ['All Posts', ...new Set(blogArticles.map((post) => post.category))];
+
+  const getIcon = (icon: 'code' | 'trending' | 'zap') => {
+    switch (icon) {
+      case 'trending':
+        return <TrendingUp className="w-12 h-12" />;
+      case 'zap':
+        return <Zap className="w-12 h-12" />;
+      case 'code':
+      default:
+        return <Code className="w-12 h-12" />;
+    }
   };
-
-  const blogPosts = [
-    {
-      title: 'Building Scalable SaaS Architecture: Microservices Best Practices',
-      excerpt: 'Architectural patterns and design principles for enterprise-grade SaaS platforms.',
-      author: 'Sarah Martinez',
-      date: 'October 20, 2025',
-      readTime: '12 min read',
-      category: 'Engineering',
-      icon: <Code className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Real-Time Data Processing at Scale: Kafka to ClickHouse Pipeline',
-      excerpt: 'How we process 10M+ events per hour with sub-second latency.',
-      author: 'David Kim',
-      date: 'October 18, 2025',
-      readTime: '15 min read',
-      category: 'Data Engineering',
-      icon: <TrendingUp className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Predictive Lead Scoring with Machine Learning',
-      excerpt: 'Using XGBoost and behavioral signals to improve sales efficiency by 300%.',
-      author: 'Dr. Alex Chen',
-      date: 'October 15, 2025',
-      readTime: '10 min read',
-      category: 'Machine Learning',
-      icon: <Zap className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/5473958/pexels-photo-5473958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Container Orchestration: Kubernetes in Production',
-      excerpt: 'Lessons learned running 500+ microservices on Kubernetes at scale.',
-      author: 'Sarah Martinez',
-      date: 'October 12, 2025',
-      readTime: '11 min read',
-      category: 'DevOps',
-      icon: <Code className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Multi-Channel Attribution: Beyond Last-Click',
-      excerpt: 'Advanced attribution models for understanding true customer journey ROI.',
-      author: 'Dr. Emily Roberts',
-      date: 'October 8, 2025',
-      readTime: '9 min read',
-      category: 'Analytics',
-      icon: <TrendingUp className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'GraphQL Performance Optimization Techniques',
-      excerpt: 'How we reduced API response times by 85% with smart caching and batching.',
-      author: 'David Kim',
-      date: 'October 5, 2025',
-      readTime: '13 min read',
-      category: 'Engineering',
-      icon: <Code className="w-12 h-12" />,
-      image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-  ];
-
-  const categories = [
-    'All Posts',
-    'AI & Automation',
-    'Engineering',
-    'Data Engineering',
-    'Machine Learning',
-    'DevOps',
-    'Analytics',
-  ];
 
   return (
     <div className="min-h-screen bg-[#14141A]">
@@ -116,8 +53,8 @@ export function BlogPage() {
               <div className="grid md:grid-cols-2">
                 <div className="relative h-64 md:h-full overflow-hidden">
                   <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
+                    src={featuredBlogArticle.image}
+                    alt={featuredBlogArticle.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#14141A]/80 via-[#14141A]/20 to-transparent" />
@@ -127,22 +64,25 @@ export function BlogPage() {
                     FEATURED ARTICLE
                   </Badge>
                   <h2 className="text-white text-2xl md:text-3xl font-bold mb-4 leading-tight">
-                    {featuredPost.title}
+                    {featuredBlogArticle.title}
                   </h2>
                   <p className="text-[#C2C2CC] text-base mb-6 leading-relaxed">
-                    {featuredPost.excerpt}
+                    {featuredBlogArticle.excerpt}
                   </p>
                   <div className="flex items-center gap-4 text-sm text-[#C2C2CC] mb-6 font-mono">
                     <div className="flex items-center gap-1">
                       <Calendar size={14} className="text-[#00D0FF]" />
-                      <span>{featuredPost.date}</span>
+                      <span>{featuredBlogArticle.date}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock size={14} className="text-[#00D0FF]" />
-                      <span>{featuredPost.readTime}</span>
+                      <span>{featuredBlogArticle.readTime}</span>
                     </div>
                   </div>
-                  <Button className="w-fit bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 font-medium px-6">
+                  <Button
+                    className="w-fit bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00]/90 font-medium px-6"
+                    onClick={() => onNavigate(`blog/${featuredBlogArticle.slug}`)}
+                  >
                     Read Full Article
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -183,9 +123,9 @@ export function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts
               .filter((post) => selectedCategory === 'All Posts' || post.category === selectedCategory)
-              .map((post, index) => (
+              .map((post) => (
                 <Card
-                  key={index}
+                  key={post.slug}
                   className="bg-[#1A1A22] border border-[#00D0FF]/10 rounded-xl overflow-hidden hover:border-[#00D0FF]/30 transition-all duration-300 hover:shadow-xl group"
                 >
                   <div className="relative h-48 overflow-hidden">
@@ -196,7 +136,7 @@ export function BlogPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A22]/90 via-[#1A1A22]/30 to-transparent" />
                     <div className="absolute bottom-4 left-4 text-[#75FF00] opacity-90 group-hover:opacity-100 transition-opacity">
-                      {post.icon}
+                      {getIcon(post.icon)}
                     </div>
                   </div>
 
@@ -231,6 +171,7 @@ export function BlogPage() {
 
                     <Button
                       variant="ghost"
+                      onClick={() => onNavigate(`blog/${post.slug}`)}
                       className="w-full text-[#00D0FF] hover:bg-[#00D0FF]/10 hover:text-white border border-[#00D0FF]/20 font-medium text-sm"
                     >
                       Read Article
