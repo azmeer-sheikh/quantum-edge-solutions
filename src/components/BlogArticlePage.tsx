@@ -97,10 +97,10 @@ export function BlogArticlePage({ slug, onNavigate }: BlogArticlePageProps) {
 
                         {/* Prev / Next Article Navigation */}
                         {(() => {
-                            const sameCat = blogArticles.filter(a => a.category === article.category);
-                            const idx = sameCat.findIndex(a => a.slug === article.slug);
-                            const prev = idx > 0 ? sameCat[idx - 1] : null;
-                            const next = idx < sameCat.length - 1 ? sameCat[idx + 1] : null;
+                            const allArticles = blogArticles;
+                            const idx = allArticles.findIndex(a => a.slug === article.slug);
+                            const prev = idx > 0 ? allArticles[idx - 1] : null;
+                            const next = idx < allArticles.length - 1 ? allArticles[idx + 1] : null;
                             if (!prev && !next) return null;
                             return (
                                 <div className="pt-8 border-t border-[#00D0FF]/10">
@@ -109,7 +109,7 @@ export function BlogArticlePage({ slug, onNavigate }: BlogArticlePageProps) {
                                         {/* Previous */}
                                         {prev ? (
                                             <button
-                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`blog/${prev.slug}`); }}
+                                                onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); onNavigate(`blog/${prev.slug}`); }}
                                                 className="group flex items-center gap-4 bg-[#1A1A22] border border-[#00D0FF]/20 rounded-xl p-5 text-left hover:border-[#00D0FF]/60 hover:bg-[#00D0FF]/5 transition-all duration-300 cursor-pointer w-full"
                                             >
                                                 <ArrowLeft size={22} className="text-[#00D0FF] shrink-0 group-hover:-translate-x-1 transition-transform duration-300" />
@@ -129,7 +129,7 @@ export function BlogArticlePage({ slug, onNavigate }: BlogArticlePageProps) {
                                         {/* Next */}
                                         {next ? (
                                             <button
-                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`blog/${next.slug}`); }}
+                                                onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); onNavigate(`blog/${next.slug}`); }}
                                                 className="group flex items-center gap-4 bg-[#1A1A22] border border-[#75FF00]/20 rounded-xl p-5 text-right justify-end hover:border-[#75FF00]/60 hover:bg-[#75FF00]/5 transition-all duration-300 cursor-pointer w-full"
                                             >
                                                 <div className="min-w-0">

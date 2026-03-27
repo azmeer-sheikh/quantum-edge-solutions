@@ -139,10 +139,10 @@ export function PortfolioCaseStudyPage({ slug, onNavigate }: PortfolioCaseStudyP
 
                         {/* Prev / Next Case Study Navigation */}
                         {(() => {
-                            const sameCat = portfolioCaseStudies.filter(cs => cs.category === caseStudy.category);
-                            const idx = sameCat.findIndex(cs => cs.slug === caseStudy.slug);
-                            const prev = idx > 0 ? sameCat[idx - 1] : null;
-                            const next = idx < sameCat.length - 1 ? sameCat[idx + 1] : null;
+                            const allStudies = portfolioCaseStudies;
+                            const idx = allStudies.findIndex(cs => cs.slug === caseStudy.slug);
+                            const prev = idx > 0 ? allStudies[idx - 1] : null;
+                            const next = idx < allStudies.length - 1 ? allStudies[idx + 1] : null;
                             if (!prev && !next) return null;
                             return (
                                 <div className="pt-8 border-t border-[#00D0FF]/10">
@@ -150,7 +150,7 @@ export function PortfolioCaseStudyPage({ slug, onNavigate }: PortfolioCaseStudyP
                                         {/* Previous */}
                                         {prev ? (
                                             <button
-                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`portfolio/${prev.slug}`); }}
+                                                onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); onNavigate(`portfolio/${prev.slug}`); }}
                                                 className="group flex items-center gap-4 bg-[#1A1A22] border border-[#00D0FF]/20 rounded-xl p-5 text-left hover:border-[#00D0FF]/60 hover:bg-[#00D0FF]/5 transition-all duration-300 cursor-pointer w-full"
                                             >
                                                 <ArrowLeft size={22} className="text-[#00D0FF] shrink-0 group-hover:-translate-x-1 transition-transform duration-300" />
@@ -170,7 +170,7 @@ export function PortfolioCaseStudyPage({ slug, onNavigate }: PortfolioCaseStudyP
                                         {/* Next */}
                                         {next ? (
                                             <button
-                                                onClick={() => { window.scrollTo({ top: 0 }); onNavigate(`portfolio/${next.slug}`); }}
+                                                onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); onNavigate(`portfolio/${next.slug}`); }}
                                                 className="group flex items-center gap-4 bg-[#1A1A22] border border-[#75FF00]/20 rounded-xl p-5 text-right justify-end hover:border-[#75FF00]/60 hover:bg-[#75FF00]/5 transition-all duration-300 cursor-pointer w-full"
                                             >
                                                 <div className="min-w-0">
