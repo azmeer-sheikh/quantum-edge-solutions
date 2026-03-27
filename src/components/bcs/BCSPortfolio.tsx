@@ -46,7 +46,7 @@ export function BCSPortfolio({ cityName }: BCSPortfolioProps) {
       category: 'VOIP Systems',
       description: 'Seamless migration from legacy PBX to cloud-based VOIP system with enhanced features and cost savings.',
       image: 'https://images.unsplash.com/photo-1580983553600-c49a1d083f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBvZmZpY2UlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2NTIyMDYwMnww&ixlib=rb-4.1.0&q=80&w=1080',
-      highlights: ['150+ Extensions', 'Mobile Integration', '40% Cost Reduction']
+      highlights: ['150+ Extensions', 'Mobile Integration', '45% Cost Reduction']
     }
   ];
 

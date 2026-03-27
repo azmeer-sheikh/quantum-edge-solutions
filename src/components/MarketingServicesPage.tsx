@@ -1,4 +1,6 @@
 import { BarChart, TrendingUp, Users, Mail, Target, Megaphone, CheckCircle, ArrowRight, Zap, PieChart, Share2, Video, Server, RefreshCw } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaGoogle, FaXTwitter, FaTiktok } from 'react-icons/fa6';
+import { HiOutlineEnvelope } from 'react-icons/hi2';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { CircuitBackground } from './CircuitBackground';
@@ -48,10 +50,10 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
   ];
 
   const results = [
-    { metric: '+320%', label: 'Engagement Rate' },
-    { metric: '5x', label: 'ROAS Average' },
+    { metric: '+80%', label: 'Engagement Rate' },
+    { metric: '2x', label: 'ROAS Average' },
     { metric: '+127%', label: 'Conversion Rate' },
-    { metric: '-35%', label: 'Cost Per Lead' },
+    { metric: '35%', label: 'Cost Per Lead' },
   ];
 
   // Managed Services Packages (Labor/Retainers)
@@ -154,14 +156,14 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
   ];
 
   const channels = [
-    { name: 'Google Ads', icon: '🔍' },
-    { name: 'Facebook', icon: '📘' },
-    { name: 'Instagram', icon: '📸' },
-    { name: 'LinkedIn', icon: '💼' },
-    { name: 'Twitter/X', icon: '🐦' },
-    { name: 'YouTube', icon: '▶️' },
-    { name: 'TikTok', icon: '🎵' },
-    { name: 'Email', icon: '📧' },
+    { name: 'Google Ads', icon: FaGoogle },
+    { name: 'Facebook', icon: FaFacebookF },
+    { name: 'Instagram', icon: FaInstagram },
+    { name: 'LinkedIn', icon: FaLinkedinIn },
+    { name: 'Twitter/X', icon: FaXTwitter },
+    { name: 'YouTube', icon: FaYoutube },
+    { name: 'TikTok', icon: FaTiktok },
+    { name: 'Email', icon: HiOutlineEnvelope },
   ];
 
   return (
@@ -198,7 +200,7 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
                     <TrendingUp className="w-6 h-6 text-[#75FF00]" />
                   </div>
                   <div>
-                    <div className="text-[#75FF00] font-bold text-xl">5x ROAS</div>
+                    <div className="text-[#75FF00] font-bold text-xl">2x ROAS</div>
                     <div className="text-[#C2C2CC] text-sm">Avg. Return</div>
                   </div>
                 </div>
@@ -231,7 +233,7 @@ export function MarketingServicesPage({ onNavigate }: MarketingServicesPageProps
           <div className="flex flex-wrap justify-center gap-4">
             {channels.map((channel, index) => (
               <div key={index} className="bg-[#1A1A22] border border-[#00D0FF]/20 rounded-lg px-6 py-3 flex items-center space-x-2 hover:border-[#75FF00] transition-all">
-                <span className="text-2xl">{channel.icon}</span>
+                <channel.icon className="w-6 h-6 text-[#00D0FF]" aria-hidden="true" />
                 <span className="text-[#C2C2CC] text-sm">{channel.name}</span>
               </div>
             ))}

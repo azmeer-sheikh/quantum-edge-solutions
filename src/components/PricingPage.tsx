@@ -103,7 +103,7 @@ const testimonials = [
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
     content: 'The web development team delivered beyond expectations. Our conversion rate doubled.',
     rating: 5,
-    result: '+200% Conversions'
+    result: '+127% Conversions'
   },
 ];
 

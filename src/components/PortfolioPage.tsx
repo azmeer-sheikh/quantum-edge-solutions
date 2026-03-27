@@ -24,7 +24,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
       solution: 'Built microservices-based SaaS platform with real-time analytics',
       results: [
         { metric: 'System Performance', value: '+340%', icon: <TrendingUp size={16} /> },
-        { metric: 'Cost Reduction', value: '-65%', icon: <DollarSign size={16} /> },
+        { metric: 'Cost Reduction', value: '45%', icon: <DollarSign size={16} /> },
         { metric: 'Deploy Time', value: '10x Faster', icon: <Clock size={16} /> },
       ],
       technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],

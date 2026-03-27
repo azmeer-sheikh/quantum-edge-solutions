@@ -27,7 +27,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       metrics: [
         { label: 'Avg ROI Increase', value: '+42%' },
         { label: 'Conversion Lift', value: '+127%' },
-        { label: 'Cost Reduction', value: '-35%' },
+        { label: 'Cost Reduction', value: '45%' },
       ],
     },
     {

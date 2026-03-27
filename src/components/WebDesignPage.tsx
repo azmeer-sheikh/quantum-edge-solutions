@@ -50,7 +50,7 @@ export function WebDesignPage({ onNavigate }: WebDesignPageProps) {
   const results = [
     { metric: '<2s', label: 'Load Time' },
     { metric: '95+', label: 'PageSpeed Score' },
-    { metric: '+200%', label: 'Conversion Rate' },
+    { metric: '+127%', label: 'Conversion Rate' },
     { metric: '99.9%', label: 'Uptime' },
   ];
 

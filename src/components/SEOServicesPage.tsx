@@ -187,7 +187,7 @@ export function SEOServicesPage({ onNavigate }: SEOServicesPageProps) {
                     <TrendingUp className="w-6 h-6 text-[#75FF00]" />
                   </div>
                   <div>
-                    <div className="text-[#75FF00] font-bold text-xl">+287%</div>
+                    <div className="text-[#75FF00] font-bold text-xl">+70%</div>
                     <div className="text-[#C2C2CC] text-sm">Organic Growth</div>
                   </div>
                 </div>
