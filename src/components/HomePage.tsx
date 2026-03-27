@@ -490,7 +490,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <GMBShowcase />
       <LocalSEOProcess />
       <IndustriesServed />
-      <ClientTestimonials />
+      
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-[#14141A] relative">
@@ -542,10 +542,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     <span className="text-[#75FF00] font-mono">OPTIMAL</span>
                   </div>
                   {[
-                    { label: 'Processing Speed', value: 98 },
-                    { label: 'Automation Rate', value: 95 },
-                    { label: 'Data Accuracy', value: 99 },
-                    { label: 'Client Satisfaction', value: 97 },
+                    { label: 'Processing Speed', value: 90 },
+                    { label: 'Automation Rate', value: 92 },
+                    { label: 'Data Accuracy', value: 90 },
+                    { label: 'Client Satisfaction', value: 92 },
                   ].map((item, idx) => (
                     <div key={idx}>
                       <div className="flex justify-between mb-2">

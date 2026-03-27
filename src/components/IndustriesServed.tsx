@@ -20,85 +20,85 @@ export function IndustriesServed() {
       icon: <Wrench className="w-8 h-8" />,
       name: 'HVAC',
       description: 'Heating, ventilation, and air conditioning services',
-      clients: '120+',
-      growth: '+285%',
+      clients: '10+',
+      growth: '+80%',
     },
     {
       icon: <Sun className="w-8 h-8" />,
       name: 'Solar Energy',
       description: 'Solar panel installation and renewable energy',
-      clients: '85+',
-      growth: '+340%',
+      clients: '5+',
+      growth: '+75%',
     },
     {
       icon: <Shield className="w-8 h-8" />,
       name: 'Security',
       description: 'Home and commercial security systems',
-      clients: '95+',
-      growth: '+265%',
+      clients: '10+',
+      growth: '+70%',
     },
     {
       icon: <Droplet className="w-8 h-8" />,
       name: 'Plumbing',
       description: 'Residential and commercial plumbing services',
-      clients: '110+',
-      growth: '+310%',
+      clients: '10+',
+      growth: '+75%',
     },
     {
       icon: <Home className="w-8 h-8" />,
       name: 'Roofing',
       description: 'Roof installation, repair, and maintenance',
-      clients: '75+',
-      growth: '+245%',
+      clients: '10+',
+      growth: '+80%',
     },
     {
       icon: <Zap className="w-8 h-8" />,
       name: 'Electrical',
       description: 'Licensed electricians and electrical contractors',
-      clients: '90+',
-      growth: '+275%',
+      clients: '10+',
+      growth: '+78%',
     },
     {
       icon: <Leaf className="w-8 h-8" />,
       name: 'Landscaping',
       description: 'Landscape design and lawn care services',
-      clients: '65+',
-      growth: '+220%',
+      clients: '5+',
+      growth: '+70%',
     },
     {
       icon: <Truck className="w-8 h-8" />,
       name: 'Moving',
       description: 'Professional moving and storage companies',
-      clients: '55+',
-      growth: '+195%',
+      clients: '10+',
+      growth: '+75%',
     },
     {
       icon: <Building2 className="w-8 h-8" />,
       name: 'Construction',
       description: 'General contractors and construction firms',
-      clients: '80+',
-      growth: '+255%',
+      clients: '10+',
+      growth: '+80%',
     },
     {
       icon: <Hammer className="w-8 h-8" />,
       name: 'Remodeling',
       description: 'Home renovation and remodeling contractors',
-      clients: '70+',
-      growth: '+230%',
+      clients: '15+',
+      growth: '+85%',
     },
     {
       icon: <Wind className="w-8 h-8" />,
       name: 'Cleaning',
       description: 'Commercial and residential cleaning services',
-      clients: '100+',
-      growth: '+295%',
+      clients: '15+',
+      growth: '+80%',
     },
     {
       icon: <Paintbrush className="w-8 h-8" />,
       name: 'Painting',
       description: 'Professional painting contractors',
-      clients: '60+',
-      growth: '+210%',
+      clients: '10+',
+      growth: '+75%',
     },
   ];
 
@@ -224,7 +224,7 @@ export function IndustriesServed() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-[#75FF00] font-mono text-3xl md:text-4xl mb-2">
-                1,000+
+                150+
               </div>
               <div className="text-[#C2C2CC]">Total Projects Delivered</div>
             </div>
@@ -236,7 +236,7 @@ export function IndustriesServed() {
             </div>
             <div>
               <div className="text-[#75FF00] font-mono text-3xl md:text-4xl mb-2">
-                +265%
+                +90%
               </div>
               <div className="text-[#C2C2CC]">Average Client Growth</div>
             </div>

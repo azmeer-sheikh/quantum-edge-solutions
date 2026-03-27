@@ -88,10 +88,10 @@ export function ClientTestimonials() {
           viewport={{ once: true }}
         >
           {[
-            { value: '50+', label: 'Happy Clients' },
+            { value: '150+', label: 'Happy Clients' },
             { value: '95%', label: 'Retention Rate' },
             { value: '4.8★', label: 'Avg. Rating' },
-            { value: '+150%', label: 'Avg. Growth' },
+            { value: '+90%', label: 'Avg. Growth' },
           ].map((stat, index) => (
             <motion.div
               key={index}
