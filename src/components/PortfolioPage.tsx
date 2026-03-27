@@ -25,7 +25,7 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
       results: [
         { metric: 'System Performance', value: '+340%', icon: <TrendingUp size={16} /> },
         { metric: 'Cost Reduction', value: '45%', icon: <DollarSign size={16} /> },
-        { metric: 'Deploy Time', value: '10x Faster', icon: <Clock size={16} /> },
+        { metric: 'Deploy Time', value: '3x Faster', icon: <Clock size={16} /> },
       ],
       technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',

@@ -66,8 +66,8 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       ],
       metrics: [
         { label: 'Uptime SLA', value: '90%' },
-        { label: 'Deploy Speed', value: '10x Faster' },
-        { label: 'Scalability', value: 'Unlimited' },
+        { label: 'Deploy Speed', value: '3x Faster' },
+        { label: 'Scalability', value: 'Scalable Architecture' },
       ],
     },
   ];
