@@ -1,7 +1,7 @@
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Cookie } from "lucide-react";
 import { CookieSettingsButton } from './CookieConsent';
 import { Logo } from './Logo';
-import {Logo2} from './Logo2';
+import { Logo2 } from './Logo2';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -19,7 +19,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </div>
 
             <p className="text-[#C2C2CC]/80 mb-4 text-sm">
-            Hive Tech Solution is a DBA of Quantum Edge Solutions LLC. <br /><br />
+              Hive Tech Solution is a DBA of Quantum Edge Solutions LLC. <br /><br />
               Quantum Edge Solutions LLC is a multi-brand digital agency. Our specialized SEO, GMB Optimization, and Web Development services are operated under our consumer brand, Hive Tech Solutions (www.hivetechsol.com). All billing and contractual obligations for Hive Tech Solutions are fulfilled by Quantum Edge Solutions LLC.
             </p>
             <div className="flex space-x-4">
