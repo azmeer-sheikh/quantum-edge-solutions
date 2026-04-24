@@ -2,6 +2,7 @@ import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Cookie } from "lucide-r
 import { CookieSettingsButton } from './CookieConsent';
 import { Logo } from './Logo';
 import { Logo2 } from './Logo2';
+import logoImg from '../assets/logo.jpg';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -15,7 +16,7 @@ export function Footer({ onNavigate }: FooterProps) {
           {/* Company Info */}
           <div>
             <div className="mb-4 flex items-center space-x-4">
-              <Logo variant="icon" className="w-32 h-auto" />              <img src="/src/assets/logo.jpg" alt="Quantum Edge Solutions" className="w-32 h-auto" />
+              <Logo variant="icon" className="w-32 h-auto" />              <img src={logoImg} alt="Quantum Edge Solutions" className="w-32 h-auto" />
             </div>
 
             <p className="text-[#C2C2CC]/80 mb-4 text-sm">
