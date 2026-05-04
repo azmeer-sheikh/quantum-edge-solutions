@@ -1,4 +1,3 @@
-
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
@@ -56,6 +55,18 @@
     build: {
       target: 'esnext',
       outDir: 'dist',
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules/react-router')) return 'router';
+            if (id.includes('node_modules/react-helmet-async')) return 'helmet';
+            if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) return 'react-vendor';
+            if (id.includes('node_modules/motion')) return 'motion';
+            if (id.includes('node_modules/recharts')) return 'recharts';
+          },
+        },
+      },
+      chunkSizeWarningLimit: 700,
     },
     server: {
       port: 3000,

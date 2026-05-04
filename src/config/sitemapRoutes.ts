@@ -1,0 +1,21 @@
+/** Static routes included in sitemap.xml (paths without trailing slash). */
+export const STATIC_SITEMAP_PATHS = [
+  '/',
+  '/platform',
+  '/services',
+  '/seo-services',
+  '/web-design',
+  '/marketing-services',
+  '/pricing',
+  '/portfolio',
+  '/blog',
+  '/contact',
+  '/privacy-policy',
+  '/terms-of-service',
+  '/refund-policy',
+  '/bussiness-communication-solution/austin',
+  '/bussiness-communication-solution/round-rock',
+  '/bussiness-communication-solution/cedar-park',
+  '/bussiness-communication-solution/leander',
+  '/bussiness-communication-solution/pflugerville',
+] as const;

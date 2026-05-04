@@ -172,7 +172,7 @@ export function ContactPage() {
         <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-10">
           {/* Form - 2 columns */}
           <div className="lg:col-span-2">
-            <Card className="bg-[#14141A]/80 backdrop-blur-xl border border-[#00D0FF]/30 shadow-2xl shadow-[#00D0FF]/10 rounded-2xl transition-all duration-500 hover:shadow-[#00D0FF]/20 hover:border-[#00D0FF]/50">
+            <Card className="bg-[#14141A] backdrop-blur-xl border border-[#00D0FF]/30 shadow-2xl shadow-[#00D0FF]/10 rounded-2xl transition-all duration-500 hover:shadow-[#00D0FF]/20 hover:border-[#00D0FF]/50">
               <CardHeader className="pb-8 border-b border-[#00D0FF]/10">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-3 bg-gradient-to-br from-[#00D0FF]/20 to-[#75FF00]/20 rounded-xl border border-[#00D0FF]/40 shadow-lg shadow-[#00D0FF]/20">

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { BCSCityData } from '../../data/bcsData';
 import { BCSNavbar } from './BCSNavbar';
 import { BCSHeroNew } from './BCSHeroNew';
@@ -24,22 +23,6 @@ export function BCSLandingPage({ data, onNavigate }: BCSLandingPageProps) {
 
   return (
     <>
-      <Helmet>
-        <title>{data.metaTitle}</title>
-        <meta name="description" content={data.metaDescription} />
-        <meta property="og:title" content={data.metaTitle} />
-        <meta property="og:description" content={data.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://quantumedgesolutions.com/bussiness-communication-solution/${data.slug}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={data.metaTitle} />
-        <meta name="twitter:description" content={data.metaDescription} />
-        <link rel="canonical" href={`https://quantumedgesolutions.com/bussiness-communication-solution/${data.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(data.structuredData)}
-        </script>
-      </Helmet>
-      
       <div className="min-h-screen bg-white overflow-x-hidden w-full">
         <BCSNavbar cityName={data.name} citySlug={data.slug} onNavigate={onNavigate} />
         
