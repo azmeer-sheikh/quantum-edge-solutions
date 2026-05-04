@@ -148,12 +148,20 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             </ul>
 
             {/* CTA */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center gap-3">
               <Button
                 onClick={() => onNavigate('contact')}
                 className="bg-[#75FF00] text-[#14141A] hover:bg-[#00B8E0] font-semibold px-4 xl:px-6 py-2 rounded-md transition-colors text-sm whitespace-nowrap"
               >
                 Start Project
+              </Button>
+              <Button
+                asChild
+                className="bg-transparent border border-[#00D0FF] text-[#00D0FF] hover:bg-[#00D0FF]/10 font-semibold px-4 xl:px-6 py-2 rounded-md transition-colors text-sm whitespace-nowrap"
+              >
+                <a href="https://portal.hivetechsol.com" target="_blank" rel="noreferrer">
+                  Login
+                </a>
               </Button>
             </div>
 
@@ -232,13 +240,21 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                 </div>
               ))}
               <Button
-                className="w-full bg-[#75FF00] text-[#14141A] hover:bg-[#75FF00] mt-4 font-semibold rounded-md"
+                className="w-full bg-[#75FF00] text-[#14141A] hover:bg-[#00B8E0] mt-4 font-semibold rounded-md"
                 onClick={() => {
                   onNavigate('contact');
                   setMobileMenuOpen(false);
                 }}
               >
                 Start Project
+              </Button>
+              <Button
+                asChild
+                className="w-full bg-transparent border border-[#00D0FF] text-[#00D0FF] hover:bg-[#00D0FF]/10 mt-4 font-semibold rounded-md"
+              >
+                <a href="https://portal.hivetechsol.com" target="_blank" rel="noreferrer">
+                  Login
+                </a>
               </Button>
             </div>
           )}
