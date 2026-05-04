@@ -58,9 +58,12 @@
       rollupOptions: {
         output: {
           manualChunks(id) {
+            // Keep react-helmet-async in react-vendor — a separate "helmet" chunk caused TDZ /
+            // "Cannot access before initialization" runtime errors (chunk load order).
+            if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-helmet-async')) {
+              return 'react-vendor';
+            }
             if (id.includes('node_modules/react-router')) return 'router';
-            if (id.includes('node_modules/react-helmet-async')) return 'helmet';
-            if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) return 'react-vendor';
             if (id.includes('node_modules/motion')) return 'motion';
             if (id.includes('node_modules/recharts')) return 'recharts';
           },
