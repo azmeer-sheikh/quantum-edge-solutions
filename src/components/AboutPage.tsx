@@ -2,6 +2,12 @@ import { Target, Zap, Database, Shield, Award, TrendingUp, Users, Code } from 'l
 import { Card, CardContent } from './ui/card';
 import { CircuitBackground } from './CircuitBackground';
 import { LogoDecorative } from './Logo';
+import logoAmazon from '@/assets/amazon.png';
+import logoShopify from '@/assets/Shopify.png';
+import logo419 from '@/assets/image-419.png';
+import logo418 from '@/assets/image-418.png';
+import logo346 from '@/assets/image-346.png';
+import logo341 from '@/assets/image-341.png';
 
 export function AboutPage() {
   const values = [
@@ -58,13 +64,13 @@ export function AboutPage() {
     },
   ];
 
-  const certifications = [
-    'AWS Advanced Consulting Partner',
-    'Google Cloud Premier Partner',
-    'Microsoft Azure Expert MSP',
-    'SOC 2 Type II Certified',
-    'ISO 27001 Certified',
-    'GDPR Compliant',
+  const trustedLogos: { src: string; alt: string }[] = [
+    { src: logoAmazon, alt: 'Amazon partner' },
+    { src: logoShopify, alt: 'Shopify partner' },
+    { src: logo419, alt: 'Certified partner' },
+    { src: logo418, alt: 'Certified partner' },
+    { src: logo346, alt: 'Certified partner' },
+    { src: logo341, alt: 'Certified partner' },
   ];
 
   return (
@@ -228,14 +234,19 @@ export function AboutPage() {
             <span className="text-[#00D0FF] text-sm font-mono">CERTIFICATIONS & COMPLIANCE</span>
           </div>
           <h2 className="text-white mb-12 text-4xl">Trusted & Certified</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
-            {certifications.map((cert, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 max-w-5xl mx-auto items-stretch">
+            {trustedLogos.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#1A1A22] border border-[#00D0FF]/20 hover:border-[#00D0FF] rounded-lg p-4 transition-all hover:glow-cyan cursor-default"
+                className="relative w-full aspect-square rounded-lg border border-[#00D0FF]/25 bg-white shadow-sm flex items-center justify-center p-3 sm:p-4 overflow-hidden transition-all hover:border-[#00D0FF] hover:shadow-md"
               >
-                <Award className="w-6 h-6 text-[#00D0FF] mx-auto mb-2" />
-                <p className="text-[#C2C2CC] text-xs font-mono text-center">{cert}</p>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="h-full w-full object-contain object-center"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             ))}
           </div>

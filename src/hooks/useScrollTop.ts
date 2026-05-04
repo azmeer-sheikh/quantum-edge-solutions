@@ -6,6 +6,7 @@ export function useScrollTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    // Synchronous jump — fastest perceived route change (no smooth scroll delay).
+    window.scrollTo(0, 0);
   }, [pathname]);
 }
